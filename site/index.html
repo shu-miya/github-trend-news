@@ -58,7 +58,21 @@
         </div>
       </section>
 
-      <section class="spotlight-section" aria-labelledby="spotlight-title"><div class="section-header"><div><div class="section-kicker">04 / EDITOR'S PICK</div><h2 id="spotlight-title">今週の注目リポジトリ</h2></div><span class="section-aside">TOP THREE • SOURCE-BACKED RESEARCH</span></div><p class="subtle spotlight-intro">各リポジトリの公式GitHub情報・README・最近の公開リリースを紹介。「詳しく読む」で一次情報を確認できます。</p><div id="spotlight" class="spotlight-grid"></div></section>
+      <section class="spotlight-section" aria-labelledby="spotlight-title">
+        <div class="section-header spotlight-heading">
+          <div><div class="section-kicker">04 / EDITOR'S PICK</div><h2 id="spotlight-title">今週の注目リポジトリ</h2></div>
+          <div class="spotlight-heading-actions">
+            <div class="spotlight-switch" role="group" aria-label="注目リポジトリの集計期間">
+              <button type="button" data-spotlight-period="daily" aria-pressed="false">日次</button>
+              <button type="button" data-spotlight-period="weekly" aria-pressed="true">週次</button>
+              <button type="button" data-spotlight-period="monthly" aria-pressed="false">月次</button>
+            </div>
+            <span class="section-aside">TOP THREE • SOURCE-BACKED RESEARCH</span>
+          </div>
+        </div>
+        <p class="subtle spotlight-intro">各リポジトリの公式GitHub情報・README・最近の公開リリースを紹介。「詳しく読む」で一次情報を確認できます。表示期間は上のランキングとは独立して切り替えられます。</p>
+        <div id="spotlight" class="spotlight-grid" aria-live="polite"></div>
+      </section>
 
       <section class="bottom-layout"><article class="panel keywords-panel"><div class="section-kicker">05 / BUZZ WORDS</div><h2>急上昇トピックの手がかり</h2><p class="subtle">上位プロジェクトの説明文から抽出したキーワードです。</p><div id="keywords" class="keywords"></div></article><article class="panel explain-panel"><div class="section-kicker">HOW TO READ THIS PAGE</div><h2>このランキングの見方</h2><div class="explain-cols"><p><b>掲載順位</b>はGitHub Trendingの表示順です。スター増加数だけを単純に並べた順位ではありません。</p><p><b>増加スター数</b>はGitHubが当該ページで公表している値です。取得日ごとの数値は移動窓であり、単純に合計できません。</p><p><b>前回比</b>は保存された直前のスナップショットと比較します。履歴の蓄積前は表示できません。</p></div></article></section>
     </main>

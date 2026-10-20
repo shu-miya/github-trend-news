@@ -42,3 +42,14 @@
 @media(max-width:850px){.enriched-card{padding:14px}.spot-facts{gap:6px}.spot-facts strong{font-size:12px}}
 @media(max-width:580px){.enriched-card{padding:18px}.enriched-card .spot-description{font-size:14px}.spot-facts strong{font-size:13px}}
 .spotlight-intro{margin:-2px 0 13px;font-size:11px;line-height:1.6}
+
+/* Independent daily / weekly / monthly spotlight picker. */
+.spotlight-heading-actions{display:flex;align-items:center;justify-content:flex-end;gap:16px;flex-wrap:wrap}
+.spotlight-switch{display:inline-flex;align-items:center;gap:3px;padding:4px;background:#f0ebe4;border:1px solid #e5dcd2;border-radius:12px;flex-shrink:0}
+.spotlight-switch button{appearance:none;border:0;background:transparent;color:#75675c;font-family:inherit;font-weight:800;font-size:12px;letter-spacing:.025em;cursor:pointer;border-radius:8px;min-width:49px;padding:8px 13px;transition:background-color .15s ease,color .15s ease}
+.spotlight-switch button:hover:not([aria-pressed="true"]){background:#e8ded5;color:#3d3029}
+.spotlight-switch button[aria-pressed="true"]{background:#b82c28;color:#fff;box-shadow:0 1px 4px #b82c2828}
+.spotlight-switch button:focus-visible{outline:3px solid #2255a5;outline-offset:2px}
+@media(max-width:850px){.spotlight-heading{align-items:flex-start;gap:12px;flex-wrap:wrap}.spotlight-heading-actions{margin-left:auto;gap:8px}}
+@media(max-width:580px){.spotlight-heading-actions{width:100%;justify-content:flex-start;margin-left:0}.spotlight-switch{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}.spotlight-switch button{width:100%;font-size:12px}.spotlight-intro{margin-top:3px}}
+@media(prefers-reduced-motion:reduce){.spotlight-switch button{transition:none}}

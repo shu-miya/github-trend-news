@@ -6,8 +6,9 @@ const fmtStars=v=>typeof v==='number'?'+'+comma(v):'未取得';
 const safeLink=repo=>/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/?$/.test(repo.url||'')?repo.url:'#';
 const periodTitle={daily:'今日増えたスター',weekly:'今週増えたスター',monthly:'今月増えたスター'};
 const periodName={daily:'日次',weekly:'週間',monthly:'月間'};
+const spotlightTitle={daily:'今日の注目リポジトリ',weekly:'今週の注目リポジトリ',monthly:'今月の注目リポジトリ'};
 const defs=['AI・エージェント','開発ツール','セキュリティ','デザイン・制作','クラウド・インフラ','データ・分析','ゲーム・エンタメ','学習・教育','その他'];
-const state={period:'weekly',scale:'linear',snapshot:null,previous:null,dates:[],dateIndex:0,search:'',category:'',order:'official',isDemo:false};
+const state={period:'weekly',spotlightPeriod:'weekly',scale:'linear',snapshot:null,previous:null,dates:[],dateIndex:0,search:'',category:'',order:'official',isDemo:false};
 function status(text,type='live'){$('notice').textContent=text;$('notice').dataset.state=type;}
 async function getJson(url){const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();}
 function snapshotPath(dateEntry){return './'+dateEntry.path.replace(/^\/+/, '');}
@@ -74,7 +75,7 @@ function render(){
   const filter=$('category-filter'), keep=filter.value;
   filter.innerHTML='<option value="">すべてのカテゴリ</option>'+Array.from(categories).sort((a,b)=>defs.indexOf(a)-defs.indexOf(b)).map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
   filter.value=categories.has(keep)?keep:'';state.category=filter.value;
-  drawRankings(rows,compare);drawBrief(rows,compare);drawCategories(rows);drawSpotlight(rows);drawKeywords(rows);
+  drawRankings(rows,compare);drawBrief(rows,compare);drawCategories(rows);renderSpotlight();drawKeywords(rows);
 }
 function drawRankings(rows,compare){
   const term=state.search.toLocaleLowerCase();
@@ -109,6 +110,15 @@ function drawCategories(rows){
   const entries=Object.entries(count).sort((a,b)=>b[1]-a[1]);
   const max=entries[0]?.[1]||1;
   $('category-bars').innerHTML=entries.map(([name,n])=>`<div class="category-row"><div class="category-label">${esc(name)}</div><div class="category-bg"><div class="category-fill" style="width:${(100*n/max).toFixed(1)}%"></div></div><div class="category-num">${n}</div></div>`).join('');
+}
+function renderSpotlight(){
+  const period=state.spotlightPeriod;
+  $('spotlight-title').textContent=spotlightTitle[period];
+  document.querySelectorAll('[data-spotlight-period]').forEach(button=>{
+    button.setAttribute('aria-pressed',String(button.dataset.spotlightPeriod===period));
+  });
+  const rows=state.snapshot?.periods?.[period]?.repositories||[];
+  drawSpotlight(rows);
 }
 function drawSpotlight(rows){
   const day = (value) => /^\d{4}-\d{2}-\d{2}$/.test(String(value||'')) ? String(value).replace(/-/g, '/') : '未取得';
@@ -159,11 +169,11 @@ function drawSpotlight(rows){
       <p class="spot-original">${official}</p>
       <div class="spot-topics"><span class="language">${language}</span>${topics}</div>
       ${meta}
-      <div class="spot-bottom"><span>Trending ${esc(periodName[state.period])} ${esc(r.rank)}位</span><div class="spot-stars">${esc(fmtStars(r.stars_period))}<small>期間内のスター増加</small></div></div>
+      <div class="spot-bottom"><span>Trending ${esc(periodName[state.spotlightPeriod])} ${esc(r.rank)}位</span><div class="spot-stars">${esc(fmtStars(r.stars_period))}<small>期間内のスター増加</small></div></div>
       <details class="spot-expand"><summary>公式情報で詳しく読む <span aria-hidden="true">＋</span></summary><div class="spot-expanded">${detailsHTML}${links}</div></details>
     </article>`;
   });
-  $('spotlight').innerHTML = blocks.join('');
+  $('spotlight').innerHTML = blocks.length ? blocks.join('') : '<p class="empty">この期間の注目リポジトリはまだありません。</p>'; 
 }
 function drawKeywords(rows){
   const keywords=[['agent',/\bagents?\b|agentic/i],['LLM',/\bllm\b|large language model/i],['AI',/\bai\b|artificial intelligence/i],['plugin',/\bplugins?\b|extension/i],['security',/secur|cyber|malware/i],['coding',/cod(e|ing)|developer|editor/i],['design',/design|diagram|graphic/i],['video',/\bvideo\b|animation/i],['data',/\bdata\b|analytics|\bsql\b/i],['cloud',/cloud|kubernetes|server|deploy/i],['game',/\bgame\b|gaming|emulat/i],['open source',/open.source|\boss\b/i]];
@@ -171,6 +181,14 @@ function drawKeywords(rows){
   $('keywords').innerHTML=score.length?score.map((x,i)=>`<span class="keyword"><b>${i+1}</b> ${esc(x.term)} <small>${x.count}</small></span>`).join(''):'<span class="empty">判定可能なキーワードなし</span>';
 }
 $('period').addEventListener('change',event=>{state.period=event.target.value;render();});
+document.querySelectorAll('[data-spotlight-period]').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const period=button.dataset.spotlightPeriod;
+    if(!Object.hasOwn(spotlightTitle,period)||period===state.spotlightPeriod)return;
+    state.spotlightPeriod=period;
+    if(state.snapshot)renderSpotlight();
+  });
+});
 $('snapshot').addEventListener('change',event=>{const i=state.dates.findIndex(e=>e.date===event.target.value);if(i!==-1)selectDate(i);});
 $('repo-search').addEventListener('input',event=>{state.search=event.target.value;const rows=state.snapshot?.periods?.[state.period]?.repositories||[];drawRankings(rows,changes(rows));});
 $('category-filter').addEventListener('change',event=>{state.category=event.target.value;const rows=state.snapshot?.periods?.[state.period]?.repositories||[];drawRankings(rows,changes(rows));});
