@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ed" />
+  <meta name="description" content="GitHubの人気リポジトリを日本語でわかりやすく。日次・週次・月次のトレンドを毎日更新するニュース型ダッシュボード。" />
+  <title>GitHub人気ニュース | デイリー・週間・月間トレンド</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <div class="app-shell">
+    <header class="masthead">
+      <div class="brand-area">
+        <div class="masthead-kicker"><span class="dot"></span> OPEN SOURCE INTELLIGENCE <span class="kicker-line"></span> DAILY EDITION</div>
+        <h1><span>GitHub</span> 人気ニュース <small>週間トレンド <em>TOP 10</em></small></h1>
+        <p class="dek">世界中の開発者が注目したプロジェクトを、技術に詳しくない方にもわかる言葉で。<br class="desktop-only" />ランキングの変化や急上昇の背景を、ひと目で把握できるニュースサイトです。</p>
+      </div>
+      <aside class="edition-controls" aria-label="表示期間の設定">
+        <div class="edition-eyebrow"><span>◷</span> THE TREND WATCH <span class="edition-tag">JAPAN EDITION</span></div>
+        <label class="field-label" for="period">集計期間</label>
+        <div class="controls-grid">
+          <select id="period" aria-label="集計期間"><option value="weekly">週間トレンド</option><option value="daily">デイリートレンド</option><option value="monthly">月間トレンド</option></select>
+          <select id="snapshot" aria-label="表示する取得日"><option>読み込み中...</option></select>
+        </div>
+        <div class="edition-meta"><span id="update-status">データを確認しています</span><span id="edition-date">—</span></div>
+      </aside>
+    </header>
+
+    <main id="main">
+      <div class="notice" id="notice" role="status" aria-live="polite">データを読み込んでいます...</div>
+      <section class="topline" aria-label="全体サマリー">
+        <div class="topline-item"><div class="topline-icon">◉</div><div><span class="metric-label">掲載プロジェクト</span><strong id="stat-repos">—</strong><small>GitHub Trending 掲載数</small></div></div>
+        <div class="topline-item"><div class="topline-icon">★</div><div><span class="metric-label">トップの増加スター</span><strong id="stat-stars">—</strong><small id="stat-stars-desc">期間内の増加数</small></div></div>
+        <div class="topline-item"><div class="topline-icon">↗</div><div><span class="metric-label">新しく登場</span><strong id="stat-new">—</strong><small>前回の取得時点と比較</small></div></div>
+        <div class="topline-item"><div class="topline-icon">▦</div><div><span class="metric-label">注目カテゴリ数</span><strong id="stat-categories">—</strong><small>推定カテゴリ分類</small></div></div>
+      </section>
+
+      <section class="top-layout">
+        <article class="panel chart-panel" aria-labelledby="ranking-title">
+          <div class="panel-header">
+            <div><div class="section-kicker">01 / TRENDING REPOSITORIES</div><h2 id="ranking-title">今週増えたスター <span class="headline-deco">★</span></h2><p class="subtle">GitHub Trending掲載順。グラフは掲載されている期間内のスター増加数です。</p></div>
+            <div class="toggle" role="group" aria-label="グラフの表示倍率"><button id="scale-linear" class="active" type="button">通常</button><button id="scale-sqrt" type="button">見やすく</button></div>
+          </div>
+          <div class="filter-row">
+            <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="repo-search" type="search" placeholder="リポジトリ名や説明で探す" aria-label="リポジトリ検索" /></div>
+            <select id="category-filter" aria-label="カテゴリで絞り込み"><option value="">すべてのカテゴリ</option></select>
+            <select id="order" aria-label="表示順"><option value="official">GitHub掲載順</option><option value="stars">スター増加数順</option></select>
+          </div>
+          <div id="rankings" class="ranking-list" aria-live="polite"><p class="empty">読込中...</p></div>
+          <div class="chart-footnote"><span><i class="legend-red"></i>トップ3</span><span><i class="legend-taupe"></i>その他のリポジトリ</span><span class="footnote-right">★はGitHubに表示された値（累積スター総数ではありません）</span></div>
+        </article>
+
+        <div class="rail">
+          <article class="panel brief-panel" aria-labelledby="brief-title"><div class="section-kicker">02 / THE WEEK IN BRIEF</div><h2 id="brief-title">今週の読みどころ</h2><div id="brief" class="brief-list"></div><p class="small-print">掲載順位とジャンル分類から自動作成。AIによる内容検証済みの記事ではありません。</p></article>
+          <article class="panel category-panel" aria-labelledby="category-title"><div class="section-kicker">03 / CATEGORY BREAKDOWN</div><h2 id="category-title">どんな分野が人気？</h2><div id="category-bars" class="category-list"></div><p class="small-print">掲載リポジトリの件数。複数ジャンルに当てはまる場合は1つに分類。</p></article>
+        </div>
+      </section>
+
+      <section class="spotlight-section" aria-labelledby="spotlight-title"><div class="section-header"><div><div class="section-kicker">04 / EDITOR'S PICK</div><h2 id="spotlight-title">今週の注目リポジトリ</h2></div><span class="section-aside">TOP THREE • QUICK EXPLAINERS</span></div><div id="spotlight" class="spotlight-grid"></div></section>
+
+      <section class="bottom-layout"><article class="panel keywords-panel"><div class="section-kicker">05 / BUZZ WORDS</div><h2>急上昇トピックの手がかり</h2><p class="subtle">上位プロジェクトの説明文から抽出したキーワードです。</p><div id="keywords" class="keywords"></div></article><article class="panel explain-panel"><div class="section-kicker">HOW TO READ THIS PAGE</div><h2>このランキングの見方</h2><div class="explain-cols"><p><b>掲載順位</b>はGitHub Trendingの表示順です。スター増加数だけを単純に並べた順位ではありません。</p><p><b>増加スター数</b>はGitHubが当該ページで公表している値です。取得日ごとの数値は移動窓であり、単純に合計できません。</p><p><b>前回比</b>は保存された直前のスナップショットと比較します。履歴の蓄積前は表示できません。</p></div></article></section>
+    </main>
+    <footer><div><strong>GitHub 人気ニュース</strong> <span>— An independent trends journal</span></div><p>データ提供元：<a href="https://github.com/trending" target="_blank" rel="noopener noreferrer">GitHub Trending ↗</a> ・GitHub非公式サイト・無断転載や内容保証を目的としません。</p></footer>
+  </div>
+<script src="./assets/demo.js"></script>
+<script src="./assets/app.js"></script>
+</body>
+</html>
