@@ -21,5 +21,25 @@
   for (const [period,factor] of [['daily',0.18],['weekly',1],['monthly',3.2]]) {
     periods[period]={source_url:`https://github.com/trending?since=${period}`, repositories:example.map((x,i)=>({rank:i+1,full_name:x[0],url:'https://github.com/'+x[0],description:x[1],language:x[2],category:x[3],intro_ja:intro[x[3]],stars_period:Math.round(x[4]*factor),stars_total:null}))};
   }
+  // The following metadata is fictional and is displayed only in DEMO mode.
+  const sampleDetails = [
+    {stars_total:150000,forks:3500,license:'MIT',pushed_on:'2026-10-19',
+      use_case_ja:'Webアプリケーションを構築するためのフレームワーク。画面表示やデータ取得の構成を整えます。',
+      topics:['react','framework','web'],readme_excerpt:'Example README overview text for building web applications.',
+      readme_features:['App routing and server-side functionality','Tools for interactive applications']},
+    {stars_total:100000,forks:4500,license:'MIT',pushed_on:'2026-10-18',
+      use_case_ja:'AIでコードを読んだり編集したりするための開発支援ツール。開発の定型作業を効率化します。',
+      topics:['agent','coding'],readme_excerpt:'Example documentation for a coding assistant.',
+      readme_features:['Natural language code operations','Command line workflow']},
+    {stars_total:180000,forks:20000,license:'MIT',pushed_on:'2026-10-19',
+      use_case_ja:'コード編集や拡張機能の利用など開発環境を整えるためのエディタです。',
+      topics:['editor','typescript'],readme_excerpt:'Example documentation for an editor.',
+      readme_features:['Cross-platform editing support','Extension-based customization']}
+  ];
+  for(const period of Object.values(periods)){
+    period.repositories.slice(0,3).forEach((repo,index)=>{
+      repo.details={...sampleDetails[index],source:'DEMO / invented'};
+    });
+  }
   window.GH_NEWS_DEMO={schema_version:1,date_jst:'2026-10-20',captured_at:'2026-10-20T03:00:00+00:00',source:'DEMO ONLY - fictional sample rankings and star counts',is_demo:true,periods};
 })();

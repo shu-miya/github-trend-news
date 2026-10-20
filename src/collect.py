@@ -10,6 +10,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
+from src.enrich import enrich_periods
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "site" / "data"
@@ -138,6 +139,8 @@ def main():
         for period in PERIODS:
             print(f"Fetching {period}", flush=True)
             periods[period] = fetch_period(period, session)
+        detail_summary = enrich_periods(periods, session)
+        print(f"Featured repository detail fetch: {detail_summary}", flush=True)
     snapshot = {"schema_version": 1, "date_jst": now.astimezone(ZoneInfo("Asia/Tokyo")).date().isoformat(),
         "captured_at": now.isoformat(timespec="seconds"), "timezone": "Asia/Tokyo",
         "source": "GitHub Trending public HTML (unofficial scraper)", "periods": periods}

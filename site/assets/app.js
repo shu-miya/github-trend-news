@@ -111,7 +111,59 @@ function drawCategories(rows){
   $('category-bars').innerHTML=entries.map(([name,n])=>`<div class="category-row"><div class="category-label">${esc(name)}</div><div class="category-bg"><div class="category-fill" style="width:${(100*n/max).toFixed(1)}%"></div></div><div class="category-num">${n}</div></div>`).join('');
 }
 function drawSpotlight(rows){
-  $('spotlight').innerHTML=rows.slice(0,3).map(r=>`<div class="spot-card"><div class="spot-head"><span class="spot-rank">${r.rank}</span><a class="spot-name" target="_blank" rel="noopener noreferrer" href="${esc(safeLink(r))}">${esc(r.full_name)} ↗</a></div><p class="spot-description">${esc(r.intro_ja||'GitHubで公開されているプロジェクトです。')}</p><p class="spot-original">${esc(r.description||'公式説明文は掲載されていません。')}</p><div class="spot-bottom"><div class="language">${esc(r.language||'言語未記載')}</div><div class="spot-stars">${esc(fmtStars(r.stars_period))}<small>${esc(periodName[state.period])}スター増加</small></div></div></div>`).join('');
+  const day = (value) => /^\d{4}-\d{2}-\d{2}$/.test(String(value||'')) ? String(value).replace(/-/g, '/') : '未取得';
+  const count = (value) => typeof value === 'number' && Number.isFinite(value) ? comma(value) : '未取得';
+  const webLink = (url) => typeof url === 'string' && /^https?:\/\/[^\s@/]+(?:\/[^\s]*)?$/.test(url) ? url : null;
+  const blocks = rows.slice(0, 3).map(r => {
+    const d = r.details && typeof r.details === 'object' ? r.details : null;
+    const name = esc(r.full_name || '名前未取得');
+    const link = safeLink(r);
+    const official = esc(d?.summary || r.description || '公式の説明文は登録されていません。');
+    const usecase = esc(d?.use_case_ja || r.intro_ja || '利用場面の情報は未取得です。');
+    const sourceNote = d?.use_case_ja ? '説明文に基づく用途の目安' : 'カテゴリから推定した分野の目安';
+    const language = esc(r.language || '言語未記載');
+    const topics = Array.isArray(d?.topics) ? d.topics.slice(0, 5).map(t => `<span class="spot-topic">#${esc(String(t).slice(0,40))}</span>`).join('') : '';
+    const featureList = Array.isArray(d?.readme_features) ? d.readme_features.slice(0, 4).map(t => `<li>${esc(String(t).slice(0,165))}</li>`).join('') : '';
+    const excerpt = typeof d?.readme_excerpt === 'string' ? esc(d.readme_excerpt.slice(0, 330)) : '';
+    const readmeLink = link === '#' ? '#' : link + '#readme';
+    const releaseLink = webLink(d?.latest_release?.url);
+    const officialSite = webLink(d?.homepage);
+    const rel = d?.latest_release ? `<div class="spot-release"><b>${esc(String(d.latest_release.tag||'').slice(0,60))}</b><span>${esc(day(d.latest_release.date))} に公開</span></div>` : '<p class="spot-empty-copy">公開リリースは取得できていません。</p>';
+    const meta = d ? `
+      <div class="spot-facts">
+        <div><span>★ 累計スター</span><strong>${count(d.stars_total ?? r.stars_total)}</strong></div>
+        <div><span>⑂ Fork</span><strong>${count(d.forks)}</strong></div>
+        <div><span>↻ 最終コード更新</span><strong>${esc(day(d.pushed_on))}</strong></div>
+        <div><span>⚖ ライセンス</span><strong>${esc(d.license || '未確認')}</strong></div>
+      </div>` : `<div class="spot-facts spot-facts-legacy"><span>★ 累計スター</span><strong>${count(r.stars_total)}</strong><small>詳細メタデータは未収集</small></div>`;
+    const detailsHTML = d ? `
+      <div class="spot-expanded-section"><div class="spot-expanded-label">README HIGHLIGHTS / 原文</div>
+        ${featureList ? `<ul class="spot-features">${featureList}</ul>` : '<p class="spot-empty-copy">特徴の箇条書きは抽出できませんでした。</p>'}
+      </div>
+      ${excerpt ? `<div class="spot-expanded-section"><div class="spot-expanded-label">README EXCERPT / 原文抜粋</div><blockquote class="spot-readme">${excerpt}</blockquote></div>` : ''}
+      <div class="spot-expanded-section"><div class="spot-expanded-label">RELEASE / リリース情報</div>${rel}</div>
+      <p class="spot-data-note">公式GitHub APIとREADMEを参照。抜粋・自動分類には欠落や誤りがありえます。最終確認は元のリポジトリで。</p>` : `
+      <p class="spot-empty-copy">この取得日のスナップショットにはGitHub API・READMEの詳細情報が保存されていません。次回のデータ収集後から確認できます。</p>`;
+    const links = `
+      <div class="spot-links">
+        <a href="${esc(link)}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        ${link === '#' ? '' : `<a href="${esc(readmeLink)}" target="_blank" rel="noopener noreferrer">公式README ↗</a>`}
+        ${officialSite ? `<a href="${esc(officialSite)}" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>` : ''}
+        ${releaseLink ? `<a href="${esc(releaseLink)}" target="_blank" rel="noopener noreferrer">最新リリース ↗</a>` : ''}
+      </div>`;
+    return `<article class="spot-card enriched-card">
+      <div class="spot-head"><span class="spot-rank">${esc(r.rank)}</span><a class="spot-name" href="${esc(link)}" target="_blank" rel="noopener noreferrer">${name} ↗</a></div>
+      <div class="spot-caption">WHAT IT DOES <span>何ができる？</span></div>
+      <p class="spot-description">${usecase}</p>
+      <p class="spot-source-note">${esc(sourceNote)}</p>
+      <p class="spot-original">${official}</p>
+      <div class="spot-topics"><span class="language">${language}</span>${topics}</div>
+      ${meta}
+      <div class="spot-bottom"><span>Trending ${esc(periodName[state.period])} ${esc(r.rank)}位</span><div class="spot-stars">${esc(fmtStars(r.stars_period))}<small>期間内のスター増加</small></div></div>
+      <details class="spot-expand"><summary>公式情報で詳しく読む <span aria-hidden="true">＋</span></summary><div class="spot-expanded">${detailsHTML}${links}</div></details>
+    </article>`;
+  });
+  $('spotlight').innerHTML = blocks.join('');
 }
 function drawKeywords(rows){
   const keywords=[['agent',/\bagents?\b|agentic/i],['LLM',/\bllm\b|large language model/i],['AI',/\bai\b|artificial intelligence/i],['plugin',/\bplugins?\b|extension/i],['security',/secur|cyber|malware/i],['coding',/cod(e|ing)|developer|editor/i],['design',/design|diagram|graphic/i],['video',/\bvideo\b|animation/i],['data',/\bdata\b|analytics|\bsql\b/i],['cloud',/cloud|kubernetes|server|deploy/i],['game',/\bgame\b|gaming|emulat/i],['open source',/open.source|\boss\b/i]];

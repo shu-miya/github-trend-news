@@ -42,6 +42,8 @@ jobs:
       - name: Test parser and archive safety
         run: python -m unittest discover -s tests -v
       - name: Fetch daily, weekly, and monthly Trending
+        env:
+          GH_TREND_TOKEN: ${{ github.token }}
         run: python -m src.collect
       - name: Save successful snapshots
         run: |

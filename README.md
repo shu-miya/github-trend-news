@@ -38,3 +38,19 @@ python -m src.collect で取得し、python -m http.server 8000 --directory site
 
 生成データは site/data/index.json、site/data/latest.json、site/data/snapshots/YYYY-MM-DD.json。
 履歴は初回取得以降のみ蓄積され、過去へ遡って任意の当時のTrending順位を再現できるわけではない。
+
+## 注目リポジトリの詳細（v1.1）
+
+日次・週次・月次それぞれのTrending上位3件について、GitHub REST APIから
+累計スター、Fork、ライセンス、topics、最終コード更新日、公式URLを取得します。
+READMEの冒頭とFeatures見出しの箇条書きを原文抜粋し、最新の公開リリースがあれば
+タグと公開日も表示します。「公式情報で詳しく読む」から一次情報を確認できます。
+
+GitHub Actionsでは `GH_TREND_TOKEN: ${{ github.token }}` を用いて公開リポジトリの
+REST APIを読み取ります。別途APIキーの登録は不要です。
+同一の注目リポジトリは1回だけAPIを取得します。API制限・READMEの欠落・
+リリース未登録でもTrending取得は継続し、取得できた項目だけを表示します。
+
+日本語の用途説明はGitHubの短い公式説明文に特定の語句がある場合だけ生成する
+保守的なルールベース表現です。AIによる完全な調査や機能検証ではありません。
+READMEの引用部分は原文と明示し、旧スナップショットでは未収録項目を明示します。
