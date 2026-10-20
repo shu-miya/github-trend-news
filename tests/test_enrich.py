@@ -47,6 +47,33 @@ rm -rf /tmp/not-actually-a-feature
         self.assertEqual(len(parsed['features']), 2)
         self.assertNotIn('rm -rf', str(parsed))
 
+    def test_readme_table_and_navigation(self):
+        md = """# Art
+[English](x) · [日本語](x) · [German](x) · [French](x) · [Spanish](x)
+
+This is a real product description about creating interactive designs with precise scene control.
+
+## Features
+| Feature | Preview |
+| --- | --- |
+| **Image to Location**<br>Compose a consistent setting for virtual actors. | Preview |
+| **3D Image Compositing**<br>Layer images and backgrounds. | Preview |
+"""
+        parsed = readme_highlights(md)
+        self.assertIn('real product description', parsed['excerpt'])
+        self.assertIn('Image to Location', parsed['features'][0])
+        self.assertEqual(len(parsed['features']), 2)
+
+    def test_readme_structure_bullets(self):
+        md = """# Plugins
+A curated plugin directory for developer assistants and integrated workflows across multiple organizations.
+
+## Structure
+- **/plugins** - Internal extensions and integrations
+- **/external_plugins** - Third-party plugins and custom tools
+"""
+        self.assertEqual(len(readme_highlights(md)['features']), 2)
+
     def test_invalid_repo_and_untrusted_website(self):
         session = FakeSession({})
         self.assertIsNone(fetch_repository_details('../../etc/passwd', session))

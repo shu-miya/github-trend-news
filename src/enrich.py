@@ -61,7 +61,7 @@ def readme_highlights(markdown: str) -> dict:
                 paragraphs.append(value)
             buffer.clear()
 
-    for line in markdown.splitlines()[:450]:
+    for line in markdown.splitlines()[:600]:
         line = line.strip()
         if line.startswith('<!--'):
             in_comment = '-->' not in line
@@ -75,20 +75,36 @@ def readme_highlights(markdown: str) -> dict:
             continue
         if in_fence:
             continue
-        header = re.match(r'^#{1,4}\s+(.+)', line)
+        # Ignore linked language navigation, badge clouds and disclaimer admonitions.
+        if line.count('](') >= 4 or line.count(' · ') >= 4 or line.startswith('>'):
+            flush()
+            continue
+        header = re.match(r'^(#{1,4})\s+(.+)', line)
         if header:
             flush()
-            name = _clean_text(header.group(1), 80).lower()
-            in_features = bool(re.search(r'\b(features?|capabilities|highlights|what it does|key benefits|key features)\b', name))
+            name = _clean_text(header.group(2), 90).lower()
+            if len(header.group(1)) <= 2:
+                in_features = bool(re.search(r'\b(features?|capabilities|highlights|what it does|what you can analyze|what you can do|key benefits|structure)\b', name))
+            elif in_features and len(features) < 4 and 5 < len(name) < 90:
+                features.append(_clean_text(header.group(2), 120))
             continue
-        if line.startswith(('<img', '<a ', '<div', '<p align', '<picture', '<svg', '---', '|', '![')):
+        if line.startswith(('<img', '<a ', '<div', '<p align', '<picture', '<svg', '---', '![')):
             flush()
+            continue
+        if line.startswith('|'):
+            flush()
+            if in_features and len(features) < 4:
+                first_cell = line.strip('| ').split('|', 1)[0]
+                if not re.fullmatch(r'[: -]+', first_cell):
+                    label = _clean_text(first_cell, 125)
+                    if len(label) > 20 and label.lower() not in ('feature', 'description', 'preview'):
+                        features.append(label)
             continue
         bullet = re.match(r'^[-*+]\s+(.+)$', line)
         if bullet:
             flush()
-            value = _clean_text(bullet.group(1), 165)
-            if in_features and len(value) >= 22 and len(features) < 4:
+            value = _clean_text(bullet.group(1), 145)
+            if in_features and len(value) >= 17 and len(features) < 4:
                 features.append(value)
             continue
         if not line or re.match(r'^\[[^]]+\]:', line):
