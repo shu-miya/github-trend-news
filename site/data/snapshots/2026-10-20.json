@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date_jst": "2026-10-20",
-  "captured_at": "2026-10-20T05:13:24+00:00",
+  "captured_at": "2026-10-20T05:17:27+00:00",
   "timezone": "Asia/Tokyo",
   "source": "GitHub Trending public HTML (unofficial scraper)",
   "periods": {
@@ -17,10 +17,10 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 3856,
-          "stars_total": 57940,
+          "stars_total": 57951,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:28+00:00",
+            "checked_at": "2026-10-20T05:17:32+00:00",
             "summary": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
             "use_case_ja": "求人の評価、応募書類の調整、面接準備などをAIで支援する仕組み。求職活動を自分の環境で進めるためのツールです。",
             "topics": [
@@ -32,8 +32,8 @@
               "cv"
             ],
             "license": "MIT",
-            "forks": 18347,
-            "stars_total": 57940,
+            "forks": 18352,
+            "stars_total": 57951,
             "pushed_on": "2026-10-19",
             "created_on": "2026-03-18",
             "homepage": null,
@@ -56,16 +56,16 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 1311,
-          "stars_total": 218019,
+          "stars_total": 218020,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:29+00:00",
+            "checked_at": "2026-10-20T05:17:33+00:00",
             "summary": "The open source coding agent.",
             "use_case_ja": "AIエージェントにコーディング作業を依頼したり、開発手順を自動化するためのツールです。",
             "topics": [],
             "license": "MIT",
             "forks": 29135,
-            "stars_total": 218019,
+            "stars_total": 218020,
             "pushed_on": "2026-10-20",
             "created_on": "2025-04-30",
             "homepage": "https://opencode.ai",
@@ -88,20 +88,20 @@
           "language": "Rust",
           "category": "AI・エージェント",
           "stars_period": 666,
-          "stars_total": 11512,
+          "stars_total": 11513,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:30+00:00",
+            "checked_at": "2026-10-20T05:17:33+00:00",
             "summary": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
             "use_case_ja": null,
             "topics": [],
             "license": "MIT",
             "forks": 817,
-            "stars_total": 11512,
+            "stars_total": 11513,
             "pushed_on": "2026-10-19",
             "created_on": "2026-05-21",
             "homepage": null,
-            "readme_excerpt": "> Long-term memory for AI coding agents. Quit Claude Code mid-task, > start OpenAI Codex in the same directory, continue without > re-explaining the architecture, the failed approaches, or the open > questions.",
+            "readme_excerpt": "Your coding agent probably has a memory feature already. Claude Code takes its own notes, Cursor remembers some things, and every platform is adding more. They all have the same limits: the notes live on one machine, belong to one agent, and drop out of view when you switch tools or hand the work to a teammate.",
             "readme_features": [],
             "latest_release": {
               "tag": "v3.1.1",
@@ -120,7 +120,7 @@
           "language": "Python",
           "category": "その他",
           "stars_period": 1011,
-          "stars_total": 139961
+          "stars_total": 139962
         },
         {
           "rank": 5,
@@ -131,7 +131,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 564,
-          "stars_total": 77332
+          "stars_total": 77333
         },
         {
           "rank": 6,
@@ -142,7 +142,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 1590,
-          "stars_total": 98552
+          "stars_total": 98556
         },
         {
           "rank": 7,
@@ -153,7 +153,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 310,
-          "stars_total": 76353
+          "stars_total": 76355
         },
         {
           "rank": 8,
@@ -164,7 +164,7 @@
           "language": "JavaScript",
           "category": "その他",
           "stars_period": 284,
-          "stars_total": 6270
+          "stars_total": 6271
         },
         {
           "rank": 9,
@@ -197,7 +197,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 167,
-          "stars_total": 152751
+          "stars_total": 152752
         },
         {
           "rank": 12,
@@ -208,7 +208,7 @@
           "language": "Python",
           "category": "その他",
           "stars_period": 363,
-          "stars_total": 41821
+          "stars_total": 41822
         }
       ]
     },
@@ -224,10 +224,10 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 201065,
-          "stars_total": 339010,
+          "stars_total": 339049,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:31+00:00",
+            "checked_at": "2026-10-20T05:17:34+00:00",
             "summary": "Reverse engineer anything with agents, from app behavior down to native binaries.",
             "use_case_ja": "AIエージェントを使い、アプリの挙動や実行ファイルの内部構造を調べるためのツール。対応環境は公式READMEで確認してください。",
             "topics": [
@@ -239,13 +239,18 @@
               "codex"
             ],
             "license": "MIT",
-            "forks": 85567,
-            "stars_total": 339010,
+            "forks": 85577,
+            "stars_total": 339049,
             "pushed_on": "2026-10-20",
             "created_on": "2026-04-14",
             "homepage": "https://rea.tools",
-            "readme_excerpt": "English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย · Deutsch · Español · Français · Українська · Polski · Português (Brasil) · العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά · മലയാളം",
-            "readme_features": [],
+            "readme_excerpt": "See a feature you like. Understand how it works, down to the binary level.",
+            "readme_features": [
+              "Desktop installations",
+              "Recorded Linux crashes",
+              "JavaScript / Electron",
+              "Saved network captures"
+            ],
             "latest_release": {
               "tag": "rea-agents-6.7.0",
               "date": "2026-10-18",
@@ -266,7 +271,7 @@
           "stars_total": 43227,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:31+00:00",
+            "checked_at": "2026-10-20T05:17:34+00:00",
             "summary": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
             "use_case_ja": "Claude Codeに追加できるプラグインを見つけるための公式ディレクトリ。開発環境の拡張に役立ちます。",
             "topics": [
@@ -280,8 +285,11 @@
             "pushed_on": "2026-10-19",
             "created_on": "2025-11-20",
             "homepage": "https://code.claude.com/docs/en/plugins",
-            "readme_excerpt": "> ⚠️ Important: Make sure you trust a plugin before installing, updating, or using it. Anthropic does not control what MCP servers, files, or other software are included in plugins and cannot verify that they will work as intended or that they won't change. See each plugin's homepage for more information.",
-            "readme_features": [],
+            "readme_excerpt": "Plugins can be installed directly from this marketplace via Claude Code's plugin system.",
+            "readme_features": [
+              "/plugins - Internal plugins developed and maintained by Anthropic",
+              "/external_plugins - Third-party plugins from partners and the community"
+            ],
             "latest_release": null,
             "archived": false
           }
@@ -295,10 +303,10 @@
           "language": "Rust",
           "category": "デザイン・制作",
           "stars_period": 13572,
-          "stars_total": 33881,
+          "stars_total": 33883,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:32+00:00",
+            "checked_at": "2026-10-20T05:17:35+00:00",
             "summary": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
             "use_case_ja": "アーティスト、デザイナー、映像制作者の制作作業を支えるエンジン。作品制作向けのワークフローに関係します。",
             "topics": [
@@ -310,12 +318,17 @@
             ],
             "license": "Apache-2.0",
             "forks": 5363,
-            "stars_total": 33881,
+            "stars_total": 33883,
             "pushed_on": "2026-10-18",
             "created_on": "2022-03-31",
             "homepage": "https://getartcraft.com",
             "readme_excerpt": "ArtCraft is the IDE for interactive AI image and video creation. Compose in 2D, stage scenes in 3D, and choose the models that fit your work. Turn prompting into crafting with visual tools for precise, repeatable results.",
-            "readme_features": [],
+            "readme_features": [
+              "Image to Location Place virtual actors in a consistent environment and plan multiple shots in the same room.",
+              "3D Image Compositing Layer backdrops, foregrounds, and props in 3D to build compositions with depth.",
+              "2D Image Compositing Compose a scene with image layers, background removal, and drawing tools.",
+              "Image to 3D Mesh Turn an image into a 3D object you can position, rotate, and frame precisely."
+            ],
             "latest_release": {
               "tag": "artcraft-v0.41.0",
               "date": "2026-09-26",
@@ -333,7 +346,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 9073,
-          "stars_total": 57939
+          "stars_total": 57951
         },
         {
           "rank": 5,
@@ -344,7 +357,7 @@
           "language": "C++",
           "category": "ゲーム・エンタメ",
           "stars_period": 12389,
-          "stars_total": 44656
+          "stars_total": 44659
         },
         {
           "rank": 6,
@@ -377,7 +390,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 5945,
-          "stars_total": 67825
+          "stars_total": 67827
         },
         {
           "rank": 9,
@@ -388,7 +401,7 @@
           "language": "HTML",
           "category": "AI・エージェント",
           "stars_period": 6638,
-          "stars_total": 58566
+          "stars_total": 58567
         },
         {
           "rank": 10,
@@ -399,7 +412,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 4355,
-          "stars_total": 53008
+          "stars_total": 53011
         },
         {
           "rank": 11,
@@ -410,7 +423,7 @@
           "language": "TypeScript",
           "category": "開発ツール",
           "stars_period": 1975,
-          "stars_total": 13101
+          "stars_total": 13102
         },
         {
           "rank": 12,
@@ -421,7 +434,7 @@
           "language": "Python",
           "category": "デザイン・制作",
           "stars_period": 17291,
-          "stars_total": 77828
+          "stars_total": 77833
         },
         {
           "rank": 13,
@@ -432,7 +445,7 @@
           "language": "JavaScript",
           "category": "その他",
           "stars_period": 2933,
-          "stars_total": 9515
+          "stars_total": 9523
         },
         {
           "rank": 14,
@@ -443,7 +456,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 2543,
-          "stars_total": 77332
+          "stars_total": 77333
         }
       ]
     },
@@ -459,10 +472,10 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 23845,
-          "stars_total": 104849,
+          "stars_total": 104850,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:33+00:00",
+            "checked_at": "2026-10-20T05:17:36+00:00",
             "summary": "The open-source app everyone uses to manage agents at work",
             "use_case_ja": null,
             "topics": [
@@ -474,8 +487,8 @@
               "ai-engineering"
             ],
             "license": "MIT",
-            "forks": 17476,
-            "stars_total": 104849,
+            "forks": 17477,
+            "stars_total": 104850,
             "pushed_on": "2026-10-20",
             "created_on": "2026-03-02",
             "homepage": "https://paperclip.ing",
@@ -498,10 +511,10 @@
           "language": "Python",
           "category": "デザイン・制作",
           "stars_period": 44161,
-          "stars_total": 77828,
+          "stars_total": 77833,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:33+00:00",
+            "checked_at": "2026-10-20T05:17:37+00:00",
             "summary": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
             "use_case_ja": null,
             "topics": [
@@ -514,7 +527,7 @@
             ],
             "license": "AGPL-3.0",
             "forks": 8533,
-            "stars_total": 77828,
+            "stars_total": 77833,
             "pushed_on": "2026-10-19",
             "created_on": "2026-04-09",
             "homepage": "https://voicestudio.sh",
@@ -537,10 +550,10 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 16049,
-          "stars_total": 67825,
+          "stars_total": 67827,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-10-20T05:13:34+00:00",
+            "checked_at": "2026-10-20T05:17:37+00:00",
             "summary": "Write HTML. Render video. Built for agents.",
             "use_case_ja": "動画の生成、加工、レンダリングなどの工程で利用するツール。具体的な対応形式は公式READMEで確認できます。",
             "topics": [
@@ -553,7 +566,7 @@
             ],
             "license": "Apache-2.0",
             "forks": 6126,
-            "stars_total": 67825,
+            "stars_total": 67827,
             "pushed_on": "2026-10-20",
             "created_on": "2026-03-10",
             "homepage": "https://hyperframes.dev",
@@ -587,7 +600,7 @@
           "language": "Python",
           "category": "その他",
           "stars_period": 5573,
-          "stars_total": 40463
+          "stars_total": 40465
         },
         {
           "rank": 6,
@@ -598,7 +611,7 @@
           "language": "JavaScript",
           "category": "AI・エージェント",
           "stars_period": 16536,
-          "stars_total": 32715
+          "stars_total": 32718
         },
         {
           "rank": 7,
@@ -653,7 +666,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 5489,
-          "stars_total": 30540
+          "stars_total": 30541
         },
         {
           "rank": 12,
@@ -664,7 +677,7 @@
           "language": "JavaScript",
           "category": "AI・エージェント",
           "stars_period": 22807,
-          "stars_total": 284258
+          "stars_total": 284260
         },
         {
           "rank": 13,
@@ -675,7 +688,7 @@
           "language": "TypeScript",
           "category": "開発ツール",
           "stars_period": 4862,
-          "stars_total": 13101
+          "stars_total": 13102
         },
         {
           "rank": 14,
@@ -708,7 +721,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 16662,
-          "stars_total": 71509
+          "stars_total": 71510
         },
         {
           "rank": 17,
@@ -719,7 +732,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 6077,
-          "stars_total": 10335
+          "stars_total": 10336
         },
         {
           "rank": 18,
@@ -730,7 +743,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 5595,
-          "stars_total": 21792
+          "stars_total": 21793
         },
         {
           "rank": 19,
@@ -763,7 +776,7 @@
           "language": "Rust",
           "category": "その他",
           "stars_period": 3797,
-          "stars_total": 18362
+          "stars_total": 18363
         }
       ]
     }
