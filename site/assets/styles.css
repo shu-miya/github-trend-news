@@ -53,3 +53,15 @@
 @media(max-width:850px){.spotlight-heading{align-items:flex-start;gap:12px;flex-wrap:wrap}.spotlight-heading-actions{margin-left:auto;gap:8px}}
 @media(max-width:580px){.spotlight-heading-actions{width:100%;justify-content:flex-start;margin-left:0}.spotlight-switch{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}.spotlight-switch button{width:100%;font-size:12px}.spotlight-intro{margin-top:3px}}
 @media(prefers-reduced-motion:reduce){.spotlight-switch button{transition:none}}
+
+/* README-reviewed briefs: sourced features and explicitly unverified integration fit. */
+.spot-editorial-summary{border-top:1px solid #eae2d9;border-bottom:1px solid #eae2d9;margin:11px 0 8px;padding:11px 0}
+.spot-editorial-summary span{font-size:10px;letter-spacing:.03em;font-weight:800;color:#77675b}
+.spot-editorial-summary p{font-size:11px;line-height:1.75;margin:5px 0 0;color:#4d4740}
+.spot-fit-list{display:grid;gap:9px}
+.spot-fit-row{border-bottom:1px dashed #e8dfd5;padding:5px 0 8px}
+.spot-fit-row:last-child{border-bottom:0}
+.spot-fit-name{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.spot-fit-name strong{font-size:11px;color:#3a3028;overflow-wrap:anywhere}
+.spot-fit-level{flex-shrink:0;border:1px solid #e3dbd2;border-radius:4px;padding:2px 7px;color:#77675c;font-size:9px;font-weight:800}
+.spot-fit-row p{font-size:10.5px;line-height:1.75;margin:5px 0 0;color:#74685f}
