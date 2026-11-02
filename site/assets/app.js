@@ -120,17 +120,42 @@ function renderSpotlight(){
   const rows=state.snapshot?.periods?.[period]?.repositories||[];
   drawSpotlight(rows);
 }
+
+function renderEditorial(d){
+  const e=d?.editorial;
+  if(!e||typeof e!=='object')return {summary:'',details:'',source:''};
+  const bulletList=(values)=>Array.isArray(values)?values.filter(v=>typeof v==='string'&&v.trim()).slice(0,5).map(v=>'<li>'+esc(v.slice(0,340))+'</li>').join(''):'';
+  const verifiedSection=(label,values)=>{
+    const bullets=bulletList(values);
+    return bullets?'<div class="spot-expanded-section"><div class="spot-expanded-label">'+esc(label)+'</div><ul class="spot-features">'+bullets+'</ul></div>':'';
+  };
+  const fits=Array.isArray(e.project_fit)?e.project_fit.filter(f=>f&&typeof f.project==='string'&&typeof f.reason==='string'&&['高','条件付き','低'].includes(f.level)).slice(0,4):[];
+  const fitRows=fits.map(f=>'<div class="spot-fit-row"><div class="spot-fit-name"><strong>'+esc(f.project.slice(0,70))+'</strong><span class="spot-fit-level" data-fit-level="'+esc(f.level)+'">'+esc(f.level)+'</span></div><p>'+esc(f.reason.slice(0,360))+'</p></div>').join('');
+  const day=/^\d{4}-\d{2}-\d{2}$/.test(e.reviewed_on||'')?e.reviewed_on:'日付未確認';
+  const source=typeof e.readme_url==='string'&&/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/blob\/[a-f0-9]{40}\/README\.md$/.test(e.readme_url)?e.readme_url:null;
+  const summary=typeof e.recommendation_ja==='string'&&e.recommendation_ja.trim()
+    ?'<div class="spot-editorial-summary"><span>既存プロジェクトへの導入評価 / 推測・未検証</span><p>'+esc(e.recommendation_ja.slice(0,320))+'</p></div>':'';
+  const details=verifiedSection('確認済みの主要機能 / 公式README',e.verified_features)
+    +verifiedSection('実行条件・導入方法 / 公式README',e.requirements)
+    +verifiedSection('導入上の注意 / 公式READMEと運用上の確認事項',e.cautions)
+    +(fitRows?'<div class="spot-expanded-section"><div class="spot-expanded-label">既存プロジェクトとの適合性 / 当サイトの推測（動作未検証）</div><div class="spot-fit-list">'+fitRows+'</div></div>':'')
+    +'<p class="spot-data-note">日本語の機能・条件は'+esc(day)+'に公式READMEで確認。導入適性は当サイトの評価であり、公式保証や実機検証を意味しません。公開後に仕様が変わる可能性があります。</p>';
+  const sourceLink=source?'<a href="'+esc(source)+'" target="_blank" rel="noopener noreferrer">確認に使ったREADME（固定版） ↗</a>':'';
+  return {summary,details,source:sourceLink};
+}
+
 function drawSpotlight(rows){
   const day = (value) => /^\d{4}-\d{2}-\d{2}$/.test(String(value||'')) ? String(value).replace(/-/g, '/') : '未取得';
   const count = (value) => typeof value === 'number' && Number.isFinite(value) ? comma(value) : '未取得';
   const webLink = (url) => typeof url === 'string' && /^https?:\/\/[^\s@/]+(?:\/[^\s]*)?$/.test(url) ? url : null;
   const blocks = rows.slice(0, 3).map(r => {
     const d = r.details && typeof r.details === 'object' ? r.details : null;
+    const editorialBlocks = renderEditorial(d);
     const name = esc(r.full_name || '名前未取得');
     const link = safeLink(r);
     const official = esc(d?.summary || r.description || '公式の説明文は登録されていません。');
     const usecase = esc(d?.use_case_ja || r.intro_ja || '利用場面の情報は未取得です。');
-    const sourceNote = d?.use_case_ja ? '説明文に基づく用途の目安' : 'カテゴリから推定した分野の目安';
+    const sourceNote = d?.editorial ? '公式READMEを確認して編集した用途要約' : d?.use_case_ja ? '公式説明文の語句から推定した用途' : 'カテゴリから推定した分野の目安';
     const language = esc(r.language || '言語未記載');
     const topics = Array.isArray(d?.topics) ? d.topics.slice(0, 5).map(t => `<span class="spot-topic">#${esc(String(t).slice(0,40))}</span>`).join('') : '';
     const featureList = Array.isArray(d?.readme_features) ? d.readme_features.slice(0, 4).map(t => `<li>${esc(String(t).slice(0,165))}</li>`).join('') : '';
@@ -147,6 +172,7 @@ function drawSpotlight(rows){
         <div><span>⚖ ライセンス</span><strong>${esc(d.license || '未確認')}</strong></div>
       </div>` : `<div class="spot-facts spot-facts-legacy"><span>★ 累計スター</span><strong>${count(r.stars_total)}</strong><small>詳細メタデータは未収集</small></div>`;
     const detailsHTML = d ? `
+      ${editorialBlocks.details}
       <div class="spot-expanded-section"><div class="spot-expanded-label">README HIGHLIGHTS / 原文</div>
         ${featureList ? `<ul class="spot-features">${featureList}</ul>` : '<p class="spot-empty-copy">特徴の箇条書きは抽出できませんでした。</p>'}
       </div>
@@ -156,6 +182,7 @@ function drawSpotlight(rows){
       <p class="spot-empty-copy">この取得日のスナップショットにはGitHub API・READMEの詳細情報が保存されていません。次回のデータ収集後から確認できます。</p>`;
     const links = `
       <div class="spot-links">
+        ${editorialBlocks.source}
         <a href="${esc(link)}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         ${link === '#' ? '' : `<a href="${esc(readmeLink)}" target="_blank" rel="noopener noreferrer">公式README ↗</a>`}
         ${officialSite ? `<a href="${esc(officialSite)}" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>` : ''}
@@ -165,6 +192,7 @@ function drawSpotlight(rows){
       <div class="spot-head"><span class="spot-rank">${esc(r.rank)}</span><a class="spot-name" href="${esc(link)}" target="_blank" rel="noopener noreferrer">${name} ↗</a></div>
       <div class="spot-caption">WHAT IT DOES <span>何ができる？</span></div>
       <p class="spot-description">${usecase}</p>
+      ${editorialBlocks.summary}
       <p class="spot-source-note">${esc(sourceNote)}</p>
       <p class="spot-original">${official}</p>
       <div class="spot-topics"><span class="language">${language}</span>${topics}</div>
