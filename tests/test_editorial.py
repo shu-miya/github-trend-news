@@ -1,6 +1,5 @@
 """Regression checks for official-README-reviewed editorial content."""
 import json
-import re
 import unittest
 from pathlib import Path
 
@@ -24,7 +23,7 @@ class EditorialTests(unittest.TestCase):
                 self.assertTrue(p["use_case_ja"])
                 self.assertTrue(p["recommendation_ja"])
                 self.assertEqual(p["reviewed_on"], "2026-11-02")
-                self.assertRegex(p["readme_url"], r"^https://github\\.com/[^/]+/[^/]+/blob/[a-f0-9]{40}/README\\.md$")
+                self.assertRegex(p["readme_url"], r"^https://github[.]com/[^/]+/[^/]+/blob/[a-f0-9]{40}/README[.]md$")
                 for key in ("verified_features", "requirements", "cautions"):
                     self.assertGreaterEqual(len(p[key]), 2)
                 self.assertEqual({f["project"] for f in p["project_fit"]}, PROJECTS)
