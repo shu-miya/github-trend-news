@@ -122,6 +122,37 @@ A curated plugin directory for developer assistants and integrated workflows acr
         self.assertEqual(p['weekly']['repositories'][0]['details']['stars_total'],100)
         self.assertNotIn('details',p['daily']['repositories'][1])
 
+    def test_curated_readme_dossier_preserved_if_live_readme_unavailable(self):
+        # A reviewed, commit-pinned README is a different source from the
+        # live README endpoint. Failed live fetching must not invent new facts.
+        name = 'thedotmack/claude-mem'
+        session = FakeSession({
+            '/repos/' + name: FakeResponse(payload={
+                'full_name': name,
+                'description': 'Persistent memory for coding agents',
+                'stargazers_count': 123,
+            }),
+        })
+        details = fetch_repository_details(name, session)
+        self.assertIn('セッション間', details['use_case_ja'])
+        self.assertIn('editorial', details)
+        self.assertTrue(details['editorial']['readme_url'].endswith('/README.md'))
+        self.assertIsNone(details['readme_excerpt'])
+        self.assertEqual(details['stars_total'], 123)
+
+    def test_curated_profile_overrides_generic_intro_only_for_known_repos(self):
+        periods = {p: {'repositories': [{'full_name': 'thedotmack/claude-mem',
+                                         'intro_ja': '汎用的な説明'},
+                                        {'full_name': 'someone/unknown',
+                                         'intro_ja': '変更しない説明'}]}
+                   for p in ('daily', 'weekly', 'monthly')}
+        known = {'stars_total': 200, 'editorial': {'use_case_ja': 'セッション間の文脈を保存'}}
+        with patch('src.enrich.fetch_repository_details', side_effect=[known, {'stars_total': 100}]):
+            enrich_periods(periods, object())
+        self.assertEqual(periods['daily']['repositories'][0]['intro_ja'], 'セッション間の文脈を保存')
+        self.assertEqual(periods['weekly']['repositories'][0]['intro_ja'], 'セッション間の文脈を保存')
+        self.assertEqual(periods['monthly']['repositories'][1]['intro_ja'], '変更しない説明')
+
     def test_interpretation_only_when_specific(self):
         self.assertIn('応募書類', use_case_ja('AI job search, cover letters'))
         self.assertIsNone(use_case_ja('A cool new product'))

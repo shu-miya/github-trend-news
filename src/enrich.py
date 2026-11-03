@@ -13,6 +13,8 @@ from urllib.parse import urlsplit
 
 import requests
 
+from src.editorial import reviewed_profile
+
 API = 'https://api.github.com'
 REPO_RE = re.compile(r'^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')
 MAX_FEATURED_PER_PERIOD = 3
@@ -193,6 +195,10 @@ def fetch_repository_details(full_name: str, session: requests.Session) -> dict 
             'latest_release': None,
             'archived': data.get('archived') is True,
         }
+        editorial = reviewed_profile(full_name)
+        if editorial:
+            details['use_case_ja'] = editorial['use_case_ja']
+            details['editorial'] = editorial
     except (requests.RequestException, ValueError, TypeError, KeyError, AttributeError) as exc:
         print(f'GitHub API detail skipped for {full_name}: {type(exc).__name__}', flush=True)
         return None
@@ -234,6 +240,8 @@ def enrich_periods(periods: dict, session: requests.Session, top_n: int = MAX_FE
                 cache[key] = fetch_repository_details(name, session)
             if cache[key]:
                 repo['details'] = cache[key]
+                if cache[key].get('editorial'):
+                    repo['intro_ja'] = cache[key]['editorial']['use_case_ja']
                 if cache[key].get('stars_total') is not None:
                     repo['stars_total'] = cache[key]['stars_total']
     return {'requested': len(cache), 'enriched': sum(bool(x) for x in cache.values())}

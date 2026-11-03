@@ -13,7 +13,7 @@
           "full_name": "thedotmack/claude-mem",
           "url": "https://github.com/thedotmack/claude-mem",
           "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "intro_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 1723,
@@ -22,7 +22,7 @@
             "source": "GitHub REST API",
             "checked_at": "2026-11-01T06:04:13+00:00",
             "summary": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-            "use_case_ja": null,
+            "use_case_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
             "topics": [
               "ai",
               "ai-agents",
@@ -44,7 +44,48 @@
               "date": "2026-11-01",
               "url": "https://github.com/thedotmack/claude-mem/releases/tag/v15.8.0"
             },
-            "archived": false
+            "archived": false,
+            "editorial": {
+              "reviewed_on": "2026-11-02",
+              "readme_url": "https://github.com/thedotmack/claude-mem/blob/26ccf4d8a029d97fb5fb88a9f1ddd73729ad1b1a/README.md",
+              "use_case_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
+              "verified_features": [
+                "ライフサイクルフックで作業の観測内容や要約を保存し、次回セッションへ関連情報を渡せる。",
+                "SQLiteへの保存、Chromaによる意味検索とキーワード検索、MCP検索ツールをREADMEが説明している。",
+                "Claude Code以外にもOpenCodeやT3 Codeなど、複数の開発エージェント向け導入方法が記載されている。"
+              ],
+              "requirements": [
+                "Node.js 20以上。Claude Code用にはプラグイン対応版が必要。Bunとuvは不足時に自動導入する設計。",
+                "README推奨の導入方法は npx claude-mem install またはClaude Codeのプラグイン導入。npmのグローバルインストールだけではフックが設定されない。"
+              ],
+              "cautions": [
+                "既定のインストール手順にはブラウザでのサインイン案内がある。オンライン利用を避ける設定やプロバイダー指定を確認すること。",
+                "フックが作業ログを収集するため、認証情報・機密コード・個人情報の保存範囲、<private>タグ、外部送信設定を事前に検証する。"
+              ],
+              "recommendation_ja": "AIリサーチの文脈引き継ぎには有望。ただし既存の保存基盤やRelayに直接接続する製品ではない。",
+              "project_fit": [
+                {
+                  "project": "Agent Relay",
+                  "level": "条件付き",
+                  "reason": "Claude Code等の作業文脈を残す補助として検討可能。Relay独自のメッセージ連携は公式READMEに記載がなく、別途実装・検証が必要。"
+                },
+                {
+                  "project": "GitHub自動化",
+                  "level": "低",
+                  "reason": "有人のコーディングセッション支援が中心。GitHub Actionsの履歴保管・ジョブ管理を代替する機能は確認できない。"
+                },
+                {
+                  "project": "日本株研究",
+                  "level": "条件付き",
+                  "reason": "検証の判断経緯や実験メモの引き継ぎに使える可能性。価格データの保存・再計算の正本にはならない。"
+                },
+                {
+                  "project": "AIリサーチ基盤",
+                  "level": "高",
+                  "reason": "セッションを跨いで観測・要約・検索する機能が研究の継続性に合う。既存Research OSとの重複とデータ境界を比較したい。"
+                }
+              ]
+            }
           }
         },
         {
@@ -52,7 +93,7 @@
           "full_name": "mattpocock/skills",
           "url": "https://github.com/mattpocock/skills",
           "description": "Skills for Real Engineers. Straight from my .agents directory.",
-          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "intro_ja": "Claude CodeやCodexなどに、仕様作成・テスト駆動開発・調査・レビュー・チケット分割の手順を追加し、実装品質と作業の再現性を高めるスキル集です。",
           "language": "Shell",
           "category": "AI・エージェント",
           "stars_period": 883,
@@ -61,7 +102,7 @@
             "source": "GitHub REST API",
             "checked_at": "2026-11-01T06:04:14+00:00",
             "summary": "Skills for Real Engineers. Straight from my .agents directory.",
-            "use_case_ja": null,
+            "use_case_ja": "Claude CodeやCodexなどに、仕様作成・テスト駆動開発・調査・レビュー・チケット分割の手順を追加し、実装品質と作業の再現性を高めるスキル集です。",
             "topics": [],
             "license": "MIT",
             "forks": 25975,
@@ -76,7 +117,48 @@
               "date": "2026-10-29",
               "url": "https://github.com/mattpocock/skills/releases/tag/v1.3.2"
             },
-            "archived": false
+            "archived": false,
+            "editorial": {
+              "reviewed_on": "2026-11-02",
+              "readme_url": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/README.md",
+              "use_case_ja": "Claude CodeやCodexなどに、仕様作成・テスト駆動開発・調査・レビュー・チケット分割の手順を追加し、実装品質と作業の再現性を高めるスキル集です。",
+              "verified_features": [
+                "/to-spec、/to-tickets、/implement、/code-reviewなど、仕様から実装・レビューまでの手順を提供する。",
+                "/tddと/diagnosing-bugsは、テストとデバッグのフィードバックループを支援する。",
+                "/grill-with-docsや/research など、要件の明確化・根拠付き調査・ドキュメント整備のためのスキルがある。"
+              ],
+              "requirements": [
+                "Claude Code、Codex、Copilot、Gemini CLIなど、READMEに記載された対応エージェントで導入する。",
+                "初回は /setup-matt-pocock-skills を各リポジトリで実行し、課題管理やドキュメントの保存先を設定する。"
+              ],
+              "cautions": [
+                "プラグイン導入とskills.shによるファイル導入を同じエージェントで併用するとスキルが重複するため、片方を選ぶ。",
+                "skills.shによる導入はファイルのコピーであり、更新は手動。導入するスキルの指示内容とリポジトリへの変更をレビューする。"
+              ],
+              "recommendation_ja": "既存の開発・研究フローに小さく取り込みやすい。まずTDD・調査・レビュー系の個別スキルから試す。",
+              "project_fit": [
+                {
+                  "project": "Agent Relay",
+                  "level": "条件付き",
+                  "reason": "連携仕様の定義・テスト・コードレビューには適するが、エージェント間通信を実装するランタイムではない。"
+                },
+                {
+                  "project": "GitHub自動化",
+                  "level": "高",
+                  "reason": "データ収集処理のTDD、変更差分レビュー、仕様・Issue整理の品質向上に使える。GitHub Actions自体の代替ではない。"
+                },
+                {
+                  "project": "日本株研究",
+                  "level": "条件付き",
+                  "reason": "検証仕様、失敗ケース、バックテストのテスト設計に使える。金融時系列の専用モデルやデータは含まれない。"
+                },
+                {
+                  "project": "AIリサーチ基盤",
+                  "level": "高",
+                  "reason": "/research、/to-spec、/triageなどをResearch OSの研究・実装フローに組み込める可能性がある。"
+                }
+              ]
+            }
           }
         },
         {
@@ -84,7 +166,7 @@
           "full_name": "Donchitos/Claude-Code-Game-Studios",
           "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
           "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
-          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "intro_ja": "Claude Codeにゲーム企画・実装・品質保証などの専門エージェント、スキル、検証フックをまとめて導入し、Godot・Unity・Unrealでのチーム型ゲーム開発を支えるテンプレートです。",
           "language": "Shell",
           "category": "AI・エージェント",
           "stars_period": 742,
@@ -93,7 +175,7 @@
             "source": "GitHub REST API",
             "checked_at": "2026-11-01T06:04:15+00:00",
             "summary": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
-            "use_case_ja": null,
+            "use_case_ja": "Claude Codeにゲーム企画・実装・品質保証などの専門エージェント、スキル、検証フックをまとめて導入し、Godot・Unity・Unrealでのチーム型ゲーム開発を支えるテンプレートです。",
             "topics": [
               "ai-agents",
               "ai-assisted-development",
@@ -117,7 +199,48 @@
               "date": "2026-10-19",
               "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/releases/tag/v1.2.0"
             },
-            "archived": false
+            "archived": false,
+            "editorial": {
+              "reviewed_on": "2026-11-02",
+              "readme_url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418/README.md",
+              "use_case_ja": "Claude Codeにゲーム企画・実装・品質保証などの専門エージェント、スキル、検証フックをまとめて導入し、Godot・Unity・Unrealでのチーム型ゲーム開発を支えるテンプレートです。",
+              "verified_features": [
+                "企画・コード・アート・QAなどを分担する専門エージェントを階層的に編成する。",
+                "Godot 4、Unity、Unreal Engine 5向けの役割やコマンド、工程別スキルを用意する。",
+                "コミットやファイル変更に対する検証フックと、/skill-testなどスキル自体の検証手順を持つ。"
+              ],
+              "requirements": [
+                "Git、Claude Code、Python 3、Bashが必要。jqは推奨される。",
+                "リポジトリをテンプレートとして利用し、プロジェクトのルートからClaude Codeを起動して /start などを使う。"
+              ],
+              "cautions": [
+                "ゲーム開発専用のテンプレートであり、他分野の既存リポジトリへそのまま組み込むことは公式READMEで保証されていない。",
+                "フックや権限ルールがファイル操作・コミットに介入する。導入前に対象パスと権限設定を確認する。自律運転ツールではない。"
+              ],
+              "recommendation_ja": "ゲーム開発の予定がなければ直接導入は低優先。エージェント分担と監査フックの設計例として参照する。",
+              "project_fit": [
+                {
+                  "project": "Agent Relay",
+                  "level": "低",
+                  "reason": "専門職分担・委任ルールは設計参考になるが、Relayへの接続やメッセージ転送機能は確認できない。"
+                },
+                {
+                  "project": "GitHub自動化",
+                  "level": "低",
+                  "reason": "ゲーム素材や実装を対象にしたフックが中心。既存CIに直接導入する合理性は限定的。"
+                },
+                {
+                  "project": "日本株研究",
+                  "level": "低",
+                  "reason": "ゲーム開発向けの仕組みで、市場データ・ファクター分析・バックテスト向けの機能は確認できない。"
+                },
+                {
+                  "project": "AIリサーチ基盤",
+                  "level": "低",
+                  "reason": "エージェント階層や監査手法は参考になるが、研究ワークフローへ転用するには再設計が必要。"
+                }
+              ]
+            }
           }
         },
         {
