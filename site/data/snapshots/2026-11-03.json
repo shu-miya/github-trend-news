@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date_jst": "2026-11-03",
-  "captured_at": "2026-11-03T06:46:27+00:00",
+  "captured_at": "2026-11-03T10:21:28+00:00",
   "timezone": "Asia/Tokyo",
   "source": "GitHub Trending public HTML (unofficial scraper)",
   "periods": {
@@ -17,10 +17,10 @@
           "language": "Rust",
           "category": "AI・エージェント",
           "stars_period": 2275,
-          "stars_total": 10778,
+          "stars_total": 11380,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:32+00:00",
+            "checked_at": "2026-11-03T10:21:33+00:00",
             "summary": "Computer use CLI for AI agents",
             "use_case_ja": null,
             "topics": [
@@ -32,8 +32,8 @@
               "computer-use"
             ],
             "license": "Apache-2.0",
-            "forks": 721,
-            "stars_total": 10778,
+            "forks": 778,
+            "stars_total": 11380,
             "pushed_on": "2026-11-03",
             "created_on": "2026-02-19",
             "homepage": "https://agent-browser.dev/desktop",
@@ -52,16 +52,16 @@
           "full_name": "thedotmack/claude-mem",
           "url": "https://github.com/thedotmack/claude-mem",
           "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "intro_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 1803,
-          "stars_total": 111045,
+          "stars_total": 111220,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:32+00:00",
+            "checked_at": "2026-11-03T10:21:34+00:00",
             "summary": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-            "use_case_ja": null,
+            "use_case_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
             "topics": [
               "ai",
               "ai-agents",
@@ -71,8 +71,8 @@
               "chromadb"
             ],
             "license": "Apache-2.0",
-            "forks": 9680,
-            "stars_total": 111045,
+            "forks": 9691,
+            "stars_total": 111220,
             "pushed_on": "2026-11-03",
             "created_on": "2025-08-31",
             "homepage": "https://claude-mem.ai",
@@ -83,7 +83,48 @@
               "date": "2026-11-02",
               "url": "https://github.com/thedotmack/claude-mem/releases/tag/v15.9.0"
             },
-            "archived": false
+            "archived": false,
+            "editorial": {
+              "reviewed_on": "2026-11-02",
+              "readme_url": "https://github.com/thedotmack/claude-mem/blob/26ccf4d8a029d97fb5fb88a9f1ddd73729ad1b1a/README.md",
+              "use_case_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
+              "verified_features": [
+                "ライフサイクルフックで作業の観測内容や要約を保存し、次回セッションへ関連情報を渡せる。",
+                "SQLiteへの保存、Chromaによる意味検索とキーワード検索、MCP検索ツールをREADMEが説明している。",
+                "Claude Code以外にもOpenCodeやT3 Codeなど、複数の開発エージェント向け導入方法が記載されている。"
+              ],
+              "requirements": [
+                "Node.js 20以上。Claude Code用にはプラグイン対応版が必要。Bunとuvは不足時に自動導入する設計。",
+                "README推奨の導入方法は npx claude-mem install またはClaude Codeのプラグイン導入。npmのグローバルインストールだけではフックが設定されない。"
+              ],
+              "cautions": [
+                "既定のインストール手順にはブラウザでのサインイン案内がある。オンライン利用を避ける設定やプロバイダー指定を確認すること。",
+                "フックが作業ログを収集するため、認証情報・機密コード・個人情報の保存範囲、<private>タグ、外部送信設定を事前に検証する。"
+              ],
+              "recommendation_ja": "AIリサーチの文脈引き継ぎには有望。ただし既存の保存基盤やRelayに直接接続する製品ではない。",
+              "project_fit": [
+                {
+                  "project": "Agent Relay",
+                  "level": "条件付き",
+                  "reason": "Claude Code等の作業文脈を残す補助として検討可能。Relay独自のメッセージ連携は公式READMEに記載がなく、別途実装・検証が必要。"
+                },
+                {
+                  "project": "GitHub自動化",
+                  "level": "低",
+                  "reason": "有人のコーディングセッション支援が中心。GitHub Actionsの履歴保管・ジョブ管理を代替する機能は確認できない。"
+                },
+                {
+                  "project": "日本株研究",
+                  "level": "条件付き",
+                  "reason": "検証の判断経緯や実験メモの引き継ぎに使える可能性。価格データの保存・再計算の正本にはならない。"
+                },
+                {
+                  "project": "AIリサーチ基盤",
+                  "level": "高",
+                  "reason": "セッションを跨いで観測・要約・検索する機能が研究の継続性に合う。既存Research OSとの重複とデータ境界を比較したい。"
+                }
+              ]
+            }
           }
         },
         {
@@ -95,10 +136,10 @@
           "language": "Python",
           "category": "開発ツール",
           "stars_period": 706,
-          "stars_total": 93342,
+          "stars_total": 93643,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:33+00:00",
+            "checked_at": "2026-11-03T10:21:35+00:00",
             "summary": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
             "use_case_ja": null,
             "topics": [
@@ -110,8 +151,8 @@
               "crawling-python"
             ],
             "license": "BSD-3-Clause",
-            "forks": 9814,
-            "stars_total": 93342,
+            "forks": 9835,
+            "stars_total": 93643,
             "pushed_on": "2026-11-02",
             "created_on": "2024-10-13",
             "homepage": "https://scrapling.readthedocs.io/en/latest/",
@@ -139,7 +180,7 @@
           "language": "C++",
           "category": "その他",
           "stars_period": 509,
-          "stars_total": 40078
+          "stars_total": 40154
         },
         {
           "rank": 5,
@@ -150,7 +191,7 @@
           "language": "Shell",
           "category": "AI・エージェント",
           "stars_period": 1379,
-          "stars_total": 33884
+          "stars_total": 34078
         },
         {
           "rank": 6,
@@ -161,7 +202,7 @@
           "language": "Python",
           "category": "その他",
           "stars_period": 653,
-          "stars_total": 16271
+          "stars_total": 16385
         },
         {
           "rank": 7,
@@ -172,7 +213,7 @@
           "language": "TypeScript",
           "category": "その他",
           "stars_period": 3229,
-          "stars_total": 42505
+          "stars_total": 42931
         },
         {
           "rank": 8,
@@ -183,7 +224,7 @@
           "language": "Python",
           "category": "その他",
           "stars_period": 857,
-          "stars_total": 46111
+          "stars_total": 46200
         },
         {
           "rank": 9,
@@ -194,7 +235,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 412,
-          "stars_total": 12227
+          "stars_total": 12276
         },
         {
           "rank": 10,
@@ -205,7 +246,7 @@
           "language": "C",
           "category": "その他",
           "stars_period": 675,
-          "stars_total": 46761
+          "stars_total": 46872
         },
         {
           "rank": 11,
@@ -216,7 +257,7 @@
           "language": "Shell",
           "category": "AI・エージェント",
           "stars_period": 858,
-          "stars_total": 310515
+          "stars_total": 310718
         },
         {
           "rank": 12,
@@ -227,7 +268,7 @@
           "language": "Rust",
           "category": "AI・エージェント",
           "stars_period": 77,
-          "stars_total": 10153
+          "stars_total": 10214
         },
         {
           "rank": 13,
@@ -238,7 +279,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 412,
-          "stars_total": 110568
+          "stars_total": 110675
         },
         {
           "rank": 14,
@@ -249,7 +290,7 @@
           "language": "Python",
           "category": "その他",
           "stars_period": 321,
-          "stars_total": 60035
+          "stars_total": 60119
         },
         {
           "rank": 15,
@@ -260,7 +301,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 420,
-          "stars_total": 38273
+          "stars_total": 38399
         }
       ]
     },
@@ -276,17 +317,17 @@
           "language": "CSS",
           "category": "AI・エージェント",
           "stars_period": 10517,
-          "stars_total": 46229,
+          "stars_total": 46426,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:33+00:00",
+            "checked_at": "2026-11-03T10:21:36+00:00",
             "summary": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
             "use_case_ja": null,
             "topics": [],
             "license": "MIT",
-            "forks": 2453,
-            "stars_total": 46229,
-            "pushed_on": "2026-10-29",
+            "forks": 2458,
+            "stars_total": 46426,
+            "pushed_on": "2026-11-03",
             "created_on": "2026-04-27",
             "homepage": "https://www.usehallmark.com/",
             "readme_excerpt": "A design skill for Claude Code, Codex, Cursor and OpenCode that refuses to look AI-generated.",
@@ -300,16 +341,16 @@
           "full_name": "thedotmack/claude-mem",
           "url": "https://github.com/thedotmack/claude-mem",
           "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "intro_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 7255,
-          "stars_total": 111045,
+          "stars_total": 111220,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:32+00:00",
+            "checked_at": "2026-11-03T10:21:34+00:00",
             "summary": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-            "use_case_ja": null,
+            "use_case_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
             "topics": [
               "ai",
               "ai-agents",
@@ -319,8 +360,8 @@
               "chromadb"
             ],
             "license": "Apache-2.0",
-            "forks": 9680,
-            "stars_total": 111045,
+            "forks": 9691,
+            "stars_total": 111220,
             "pushed_on": "2026-11-03",
             "created_on": "2025-08-31",
             "homepage": "https://claude-mem.ai",
@@ -331,7 +372,48 @@
               "date": "2026-11-02",
               "url": "https://github.com/thedotmack/claude-mem/releases/tag/v15.9.0"
             },
-            "archived": false
+            "archived": false,
+            "editorial": {
+              "reviewed_on": "2026-11-02",
+              "readme_url": "https://github.com/thedotmack/claude-mem/blob/26ccf4d8a029d97fb5fb88a9f1ddd73729ad1b1a/README.md",
+              "use_case_ja": "Claude CodeなどのAIエージェントの作業・判断履歴をセッション間で保持し、次の作業で必要な文脈を検索・再利用する記憶支援ツールです。",
+              "verified_features": [
+                "ライフサイクルフックで作業の観測内容や要約を保存し、次回セッションへ関連情報を渡せる。",
+                "SQLiteへの保存、Chromaによる意味検索とキーワード検索、MCP検索ツールをREADMEが説明している。",
+                "Claude Code以外にもOpenCodeやT3 Codeなど、複数の開発エージェント向け導入方法が記載されている。"
+              ],
+              "requirements": [
+                "Node.js 20以上。Claude Code用にはプラグイン対応版が必要。Bunとuvは不足時に自動導入する設計。",
+                "README推奨の導入方法は npx claude-mem install またはClaude Codeのプラグイン導入。npmのグローバルインストールだけではフックが設定されない。"
+              ],
+              "cautions": [
+                "既定のインストール手順にはブラウザでのサインイン案内がある。オンライン利用を避ける設定やプロバイダー指定を確認すること。",
+                "フックが作業ログを収集するため、認証情報・機密コード・個人情報の保存範囲、<private>タグ、外部送信設定を事前に検証する。"
+              ],
+              "recommendation_ja": "AIリサーチの文脈引き継ぎには有望。ただし既存の保存基盤やRelayに直接接続する製品ではない。",
+              "project_fit": [
+                {
+                  "project": "Agent Relay",
+                  "level": "条件付き",
+                  "reason": "Claude Code等の作業文脈を残す補助として検討可能。Relay独自のメッセージ連携は公式READMEに記載がなく、別途実装・検証が必要。"
+                },
+                {
+                  "project": "GitHub自動化",
+                  "level": "低",
+                  "reason": "有人のコーディングセッション支援が中心。GitHub Actionsの履歴保管・ジョブ管理を代替する機能は確認できない。"
+                },
+                {
+                  "project": "日本株研究",
+                  "level": "条件付き",
+                  "reason": "検証の判断経緯や実験メモの引き継ぎに使える可能性。価格データの保存・再計算の正本にはならない。"
+                },
+                {
+                  "project": "AIリサーチ基盤",
+                  "level": "高",
+                  "reason": "セッションを跨いで観測・要約・検索する機能が研究の継続性に合う。既存Research OSとの重複とデータ境界を比較したい。"
+                }
+              ]
+            }
           }
         },
         {
@@ -343,10 +425,10 @@
           "language": "Rust",
           "category": "AI・エージェント",
           "stars_period": 11754,
-          "stars_total": 100760,
+          "stars_total": 100981,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:34+00:00",
+            "checked_at": "2026-11-03T10:21:36+00:00",
             "summary": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
             "use_case_ja": "AIエージェントにコーディング作業を依頼したり、開発手順を自動化するためのツールです。",
             "topics": [
@@ -357,8 +439,8 @@
               "slop"
             ],
             "license": "Apache-2.0",
-            "forks": 5950,
-            "stars_total": 100760,
+            "forks": 5972,
+            "stars_total": 100981,
             "pushed_on": "2026-11-02",
             "created_on": "2025-11-16",
             "homepage": "https://impeccable.style",
@@ -381,7 +463,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 4091,
-          "stars_total": 26075
+          "stars_total": 26139
         },
         {
           "rank": 5,
@@ -392,7 +474,7 @@
           "language": "Shell",
           "category": "AI・エージェント",
           "stars_period": 5956,
-          "stars_total": 311378
+          "stars_total": 311491
         },
         {
           "rank": 6,
@@ -403,7 +485,7 @@
           "language": "TypeScript",
           "category": "その他",
           "stars_period": 9770,
-          "stars_total": 42505
+          "stars_total": 42931
         },
         {
           "rank": 7,
@@ -414,7 +496,7 @@
           "language": "TypeScript",
           "category": "開発ツール",
           "stars_period": 4812,
-          "stars_total": 7257
+          "stars_total": 7305
         },
         {
           "rank": 8,
@@ -425,7 +507,7 @@
           "language": "JavaScript",
           "category": "AI・エージェント",
           "stars_period": 9155,
-          "stars_total": 57610
+          "stars_total": 57737
         },
         {
           "rank": 9,
@@ -436,7 +518,7 @@
           "language": "Markdown",
           "category": "AI・エージェント",
           "stars_period": 1707,
-          "stars_total": 10424
+          "stars_total": 10473
         },
         {
           "rank": 10,
@@ -447,7 +529,7 @@
           "language": null,
           "category": "AI・エージェント",
           "stars_period": 4397,
-          "stars_total": 228681
+          "stars_total": 228802
         },
         {
           "rank": 11,
@@ -458,7 +540,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 2828,
-          "stars_total": 186868
+          "stars_total": 186934
         },
         {
           "rank": 12,
@@ -469,7 +551,7 @@
           "language": "JavaScript",
           "category": "AI・エージェント",
           "stars_period": 5729,
-          "stars_total": 108965
+          "stars_total": 109140
         },
         {
           "rank": 13,
@@ -480,7 +562,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 4603,
-          "stars_total": 120066
+          "stars_total": 120121
         },
         {
           "rank": 14,
@@ -491,7 +573,7 @@
           "language": "Zig",
           "category": "ゲーム・エンタメ",
           "stars_period": 687,
-          "stars_total": 63344
+          "stars_total": 63364
         },
         {
           "rank": 15,
@@ -502,7 +584,7 @@
           "language": "JavaScript",
           "category": "AI・エージェント",
           "stars_period": 6201,
-          "stars_total": 295864
+          "stars_total": 296033
         },
         {
           "rank": 16,
@@ -513,7 +595,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 4924,
-          "stars_total": 77884
+          "stars_total": 78010
         }
       ]
     },
@@ -529,10 +611,10 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 422104,
-          "stars_total": 423993,
+          "stars_total": 424774,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:35+00:00",
+            "checked_at": "2026-11-03T10:21:37+00:00",
             "summary": "Reverse engineer anything with agents, from app behavior down to native binaries.",
             "use_case_ja": "AIエージェントを使い、アプリの挙動や実行ファイルの内部構造を調べるためのツール。対応環境は公式READMEで確認してください。",
             "topics": [
@@ -544,8 +626,8 @@
               "cpp"
             ],
             "license": "MIT",
-            "forks": 105677,
-            "stars_total": 423993,
+            "forks": 105824,
+            "stars_total": 424774,
             "pushed_on": "2026-11-03",
             "created_on": "2026-04-14",
             "homepage": "https://rea.tools",
@@ -573,16 +655,16 @@
           "language": "JavaScript",
           "category": "AI・エージェント",
           "stars_period": 33474,
-          "stars_total": 57610,
+          "stars_total": 57737,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:35+00:00",
+            "checked_at": "2026-11-03T10:21:38+00:00",
             "summary": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
             "use_case_ja": null,
             "topics": [],
             "license": "MIT",
-            "forks": 3749,
-            "stars_total": 57610,
+            "forks": 3764,
+            "stars_total": 57737,
             "pushed_on": "2026-09-14",
             "created_on": "2026-06-18",
             "homepage": null,
@@ -601,10 +683,10 @@
           "language": "TypeScript",
           "category": "開発ツール",
           "stars_period": 11344,
-          "stars_total": 12694,
+          "stars_total": 12728,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-03T06:46:36+00:00",
+            "checked_at": "2026-11-03T10:21:39+00:00",
             "summary": "Next generation e2e testing framework for web and mobile apps.",
             "use_case_ja": null,
             "topics": [
@@ -616,8 +698,8 @@
               "playwright"
             ],
             "license": "Apache-2.0",
-            "forks": 657,
-            "stars_total": 12694,
+            "forks": 664,
+            "stars_total": 12728,
             "pushed_on": "2026-11-03",
             "created_on": "2026-07-22",
             "homepage": "https://e2e.tester.army",
@@ -640,7 +722,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 22290,
-          "stars_total": 77884
+          "stars_total": 78010
         },
         {
           "rank": 5,
@@ -651,7 +733,7 @@
           "language": "CSS",
           "category": "AI・エージェント",
           "stars_period": 16306,
-          "stars_total": 46229
+          "stars_total": 46426
         },
         {
           "rank": 6,
@@ -662,7 +744,7 @@
           "language": "Python",
           "category": "デザイン・制作",
           "stars_period": 47605,
-          "stars_total": 99342
+          "stars_total": 99543
         },
         {
           "rank": 7,
@@ -673,7 +755,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 8614,
-          "stars_total": 34515
+          "stars_total": 34537
         },
         {
           "rank": 8,
@@ -684,7 +766,7 @@
           "language": "TypeScript",
           "category": "開発ツール",
           "stars_period": 3213,
-          "stars_total": 3768
+          "stars_total": 3804
         },
         {
           "rank": 9,
@@ -695,7 +777,7 @@
           "language": "Java",
           "category": "セキュリティ",
           "stars_period": 17043,
-          "stars_total": 97289
+          "stars_total": 97362
         },
         {
           "rank": 10,
@@ -706,7 +788,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 15681,
-          "stars_total": 111045
+          "stars_total": 111220
         },
         {
           "rank": 11,
@@ -717,7 +799,7 @@
           "language": "Rust",
           "category": "AI・エージェント",
           "stars_period": 26586,
-          "stars_total": 100760
+          "stars_total": 100981
         },
         {
           "rank": 12,
@@ -728,7 +810,7 @@
           "language": "TypeScript",
           "category": "その他",
           "stars_period": 15731,
-          "stars_total": 42505
+          "stars_total": 42931
         },
         {
           "rank": 13,
@@ -739,7 +821,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 8535,
-          "stars_total": 25081
+          "stars_total": 25124
         },
         {
           "rank": 14,
@@ -750,7 +832,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 3018,
-          "stars_total": 3829
+          "stars_total": 3841
         },
         {
           "rank": 15,
@@ -761,7 +843,7 @@
           "language": "Python",
           "category": "AI・エージェント",
           "stars_period": 8715,
-          "stars_total": 45884
+          "stars_total": 45908
         },
         {
           "rank": 16,
@@ -772,7 +854,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 8531,
-          "stars_total": 33313
+          "stars_total": 33323
         },
         {
           "rank": 17,
@@ -783,7 +865,7 @@
           "language": "TypeScript",
           "category": "AI・エージェント",
           "stars_period": 16329,
-          "stars_total": 46572
+          "stars_total": 46678
         },
         {
           "rank": 18,
@@ -794,7 +876,7 @@
           "language": "JavaScript",
           "category": "AI・エージェント",
           "stars_period": 16952,
-          "stars_total": 108965
+          "stars_total": 109140
         }
       ]
     }
