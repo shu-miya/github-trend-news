@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "date_jst": "2026-11-10",
+  "captured_at": "2026-11-10T07:17:22+00:00",
+  "timezone": "Asia/Tokyo",
+  "source": "GitHub Trending public HTML (unofficial scraper)",
+  "periods": {
+    "daily": {
+      "source_url": "https://github.com/trending?since=daily",
+      "repositories": [
+        {
+          "rank": 1,
+          "full_name": "anthropics/skills",
+          "url": "https://github.com/anthropics/skills",
+          "description": "Public repository for Agent Skills",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Python",
+          "category": "AI・エージェント",
+          "stars_period": 1038,
+          "stars_total": 191432,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:27+00:00",
+            "summary": "Public repository for Agent Skills",
+            "use_case_ja": null,
+            "topics": [
+              "agent-skills"
+            ],
+            "license": null,
+            "forks": 22473,
+            "stars_total": 191432,
+            "pushed_on": "2026-11-06",
+            "created_on": "2025-09-22",
+            "homepage": null,
+            "readme_excerpt": "Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific wo",
+            "readme_features": [],
+            "latest_release": null,
+            "archived": false
+          }
+        },
+        {
+          "rank": 2,
+          "full_name": "meta/astryx",
+          "url": "https://github.com/meta/astryx",
+          "description": "An open source design system that's fully customizable and agent ready",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "TypeScript",
+          "category": "AI・エージェント",
+          "stars_period": 3278,
+          "stars_total": 20886,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:28+00:00",
+            "summary": "An open source design system that's fully customizable and agent ready",
+            "use_case_ja": null,
+            "topics": [],
+            "license": "MIT",
+            "forks": 1584,
+            "stars_total": 20886,
+            "pushed_on": "2026-11-10",
+            "created_on": "2026-01-09",
+            "homepage": "http://astryx.atmeta.com",
+            "readme_excerpt": "An open source design system that's fully customizable and built for how we build now: by people and the agents working alongside them.",
+            "readme_features": [],
+            "latest_release": {
+              "tag": "v0.7.11",
+              "date": "2026-11-07",
+              "url": "https://github.com/meta/astryx/releases/tag/v0.7.11"
+            },
+            "archived": false
+          }
+        },
+        {
+          "rank": 3,
+          "full_name": "sherlock-project/sherlock",
+          "url": "https://github.com/sherlock-project/sherlock",
+          "description": "Hunt down social media accounts by username across social networks",
+          "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
+          "language": "Python",
+          "category": "その他",
+          "stars_period": 4267,
+          "stars_total": 107777,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:29+00:00",
+            "summary": "Hunt down social media accounts by username across social networks",
+            "use_case_ja": null,
+            "topics": [
+              "cli",
+              "cti",
+              "cybersecurity",
+              "forensics",
+              "hacktoberfest",
+              "information-gathering"
+            ],
+            "license": "MIT",
+            "forks": 12460,
+            "stars_total": 107777,
+            "pushed_on": "2026-11-10",
+            "created_on": "2018-12-24",
+            "homepage": "https://sherlockproject.xyz",
+            "readme_excerpt": "Hunt down social media accounts by username across 400+ social networks",
+            "readme_features": [],
+            "latest_release": {
+              "tag": "v0.16.2",
+              "date": "2026-09-08",
+              "url": "https://github.com/sherlock-project/sherlock/releases/tag/v0.16.2"
+            },
+            "archived": false
+          }
+        },
+        {
+          "rank": 4,
+          "full_name": "google-deepmind/mujoco",
+          "url": "https://github.com/google-deepmind/mujoco",
+          "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+          "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
+          "language": "C++",
+          "category": "その他",
+          "stars_period": 574,
+          "stars_total": 17060
+        },
+        {
+          "rank": 5,
+          "full_name": "anthropics/claude-quickstarts",
+          "url": "https://github.com/anthropics/claude-quickstarts",
+          "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+          "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
+          "language": "Python",
+          "category": "AI・エージェント",
+          "stars_period": 551,
+          "stars_total": 20165
+        },
+        {
+          "rank": 6,
+          "full_name": "garrytan/gbrain",
+          "url": "https://github.com/garrytan/gbrain",
+          "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "TypeScript",
+          "category": "AI・エージェント",
+          "stars_period": 216,
+          "stars_total": 32315
+        },
+        {
+          "rank": 7,
+          "full_name": "vercel-labs/agent-browser",
+          "url": "https://github.com/vercel-labs/agent-browser",
+          "description": "Browser automation CLI for AI agents",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Rust",
+          "category": "AI・エージェント",
+          "stars_period": 916,
+          "stars_total": 48723
+        },
+        {
+          "rank": 8,
+          "full_name": "ruvnet/RuView",
+          "url": "https://github.com/ruvnet/RuView",
+          "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+          "intro_ja": "動画やアニメーションの作成・処理に関連します。",
+          "language": "Rust",
+          "category": "デザイン・制作",
+          "stars_period": 172,
+          "stars_total": 103669
+        },
+        {
+          "rank": 9,
+          "full_name": "ZhuLinsen/daily_stock_analysis",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+          "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
+          "language": "Python",
+          "category": "AI・エージェント",
+          "stars_period": 506,
+          "stars_total": 69247
+        },
+        {
+          "rank": 10,
+          "full_name": "homeassistant-ai/ha-mcp",
+          "url": "https://github.com/homeassistant-ai/ha-mcp",
+          "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+          "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
+          "language": "Python",
+          "category": "AI・エージェント",
+          "stars_period": 31,
+          "stars_total": 6180
+        },
+        {
+          "rank": 11,
+          "full_name": "milind-soni/OpenMausBot",
+          "url": "https://github.com/milind-soni/OpenMausBot",
+          "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+          "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
+          "language": "TypeScript",
+          "category": "その他",
+          "stars_period": 1587,
+          "stars_total": 20099
+        }
+      ]
+    },
+    "weekly": {
+      "source_url": "https://github.com/trending?since=weekly",
+      "repositories": [
+        {
+          "rank": 1,
+          "full_name": "NVIDIA/auto-ontology",
+          "url": "https://github.com/NVIDIA/auto-ontology",
+          "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Python",
+          "category": "AI・エージェント",
+          "stars_period": 10159,
+          "stars_total": 11161,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:29+00:00",
+            "summary": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+            "use_case_ja": null,
+            "topics": [],
+            "license": "Apache-2.0",
+            "forks": 913,
+            "stars_total": 11161,
+            "pushed_on": "2026-11-10",
+            "created_on": "2026-04-27",
+            "homepage": null,
+            "readme_excerpt": "Agents can retrieve documents and query databases, but reliability gates agentic analytics: a revenue metric answered faster is worth nothing if the number is wrong. Agents need a context layer that tells them where data lives, what it means, whether to use it, how to use it, where it came from, and what is similar. NVIDIA Auto",
+            "readme_features": [
+              "Natural-language querying of structured data — questions are translated to",
+              "Semantic catalog / ontology layer over relational sources, stored in",
+              "Authentication & RBAC —using Better Auth.",
+              "Web UI for chat, analysis, data catalog, analytics, and settings."
+            ],
+            "latest_release": null,
+            "archived": false
+          }
+        },
+        {
+          "rank": 2,
+          "full_name": "vercel-labs/agent-desktop",
+          "url": "https://github.com/vercel-labs/agent-desktop",
+          "description": "Computer use CLI for AI agents",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Rust",
+          "category": "AI・エージェント",
+          "stars_period": 12120,
+          "stars_total": 20799,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:30+00:00",
+            "summary": "Computer use CLI for AI agents",
+            "use_case_ja": null,
+            "topics": [
+              "accessibility",
+              "accessibility-api",
+              "ai-agents",
+              "automation",
+              "cli",
+              "computer-use"
+            ],
+            "license": "Apache-2.0",
+            "forks": 1541,
+            "stars_total": 20799,
+            "pushed_on": "2026-11-10",
+            "created_on": "2026-02-19",
+            "homepage": "https://agent-browser.dev/desktop",
+            "readme_excerpt": "Computer use for AI agents: see and operate desktop apps on macOS, Windows, and Linux through the OS accessibility tree.",
+            "readme_features": [],
+            "latest_release": {
+              "tag": "v1.2.0",
+              "date": "2026-11-05",
+              "url": "https://github.com/vercel-labs/agent-desktop/releases/tag/v1.2.0"
+            },
+            "archived": false
+          }
+        },
+        {
+          "rank": 3,
+          "full_name": "anthropics/skills",
+          "url": "https://github.com/anthropics/skills",
+          "description": "Public repository for Agent Skills",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Python",
+          "category": "AI・エージェント",
+          "stars_period": 3796,
+          "stars_total": 191432,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:27+00:00",
+            "summary": "Public repository for Agent Skills",
+            "use_case_ja": null,
+            "topics": [
+              "agent-skills"
+            ],
+            "license": null,
+            "forks": 22473,
+            "stars_total": 191432,
+            "pushed_on": "2026-11-06",
+            "created_on": "2025-09-22",
+            "homepage": null,
+            "readme_excerpt": "Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific wo",
+            "readme_features": [],
+            "latest_release": null,
+            "archived": false
+          }
+        },
+        {
+          "rank": 4,
+          "full_name": "max-sixty/worktrunk",
+          "url": "https://github.com/max-sixty/worktrunk",
+          "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Rust",
+          "category": "AI・エージェント",
+          "stars_period": 2395,
+          "stars_total": 12314
+        },
+        {
+          "rank": 5,
+          "full_name": "milind-soni/OpenMausBot",
+          "url": "https://github.com/milind-soni/OpenMausBot",
+          "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+          "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
+          "language": "TypeScript",
+          "category": "その他",
+          "stars_period": 8325,
+          "stars_total": 20099
+        },
+        {
+          "rank": 6,
+          "full_name": "thedotmack/claude-mem",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "TypeScript",
+          "category": "AI・エージェント",
+          "stars_period": 5130,
+          "stars_total": 115526
+        },
+        {
+          "rank": 7,
+          "full_name": "Donchitos/Claude-Code-Game-Studios",
+          "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+          "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Shell",
+          "category": "AI・エージェント",
+          "stars_period": 4324,
+          "stars_total": 37726
+        },
+        {
+          "rank": 8,
+          "full_name": "vercel-labs/agent-browser",
+          "url": "https://github.com/vercel-labs/agent-browser",
+          "description": "Browser automation CLI for AI agents",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Rust",
+          "category": "AI・エージェント",
+          "stars_period": 2994,
+          "stars_total": 48723
+        },
+        {
+          "rank": 9,
+          "full_name": "pingdotgg/t3code",
+          "url": "https://github.com/pingdotgg/t3code",
+          "description": "",
+          "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
+          "language": "TypeScript",
+          "category": "その他",
+          "stars_period": 13448,
+          "stars_total": 54567
+        },
+        {
+          "rank": 10,
+          "full_name": "D4Vinci/Scrapling",
+          "url": "https://github.com/D4Vinci/Scrapling",
+          "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+          "intro_ja": "プログラムの作成や開発作業を助けるプロジェクトです。",
+          "language": "Python",
+          "category": "開発ツール",
+          "stars_period": 8226,
+          "stars_total": 100737
+        },
+        {
+          "rank": 11,
+          "full_name": "The-PR-Agent/pr-agent",
+          "url": "https://github.com/The-PR-Agent/pr-agent",
+          "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Python",
+          "category": "AI・エージェント",
+          "stars_period": 1822,
+          "stars_total": 15769
+        },
+        {
+          "rank": 12,
+          "full_name": "cloudflare/security-audit-skill",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "JavaScript",
+          "category": "AI・エージェント",
+          "stars_period": 10695,
+          "stars_total": 68376
+        },
+        {
+          "rank": 13,
+          "full_name": "Nutlope/hallmark",
+          "url": "https://github.com/Nutlope/hallmark",
+          "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+          "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
+          "language": "CSS",
+          "category": "AI・エージェント",
+          "stars_period": 5987,
+          "stars_total": 51990
+        },
+        {
+          "rank": 14,
+          "full_name": "mattpocock/skills",
+          "url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Shell",
+          "category": "AI・エージェント",
+          "stars_period": 9800,
+          "stars_total": 320061
+        }
+      ]
+    },
+    "monthly": {
+      "source_url": "https://github.com/trending?since=monthly",
+      "repositories": [
+        {
+          "rank": 1,
+          "full_name": "morluto/rea",
+          "url": "https://github.com/morluto/rea",
+          "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "TypeScript",
+          "category": "AI・エージェント",
+          "stars_period": 413718,
+          "stars_total": 447844,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:31+00:00",
+            "summary": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+            "use_case_ja": "AIエージェントを使い、アプリの挙動や実行ファイルの内部構造を調べるためのツール。対応環境は公式READMEで確認してください。",
+            "topics": [
+              "agent-skills",
+              "ai",
+              "android",
+              "claude-code",
+              "cli",
+              "cpp"
+            ],
+            "license": "MIT",
+            "forks": 110417,
+            "stars_total": 447844,
+            "pushed_on": "2026-11-10",
+            "created_on": "2026-04-14",
+            "homepage": "https://rea.tools",
+            "readme_excerpt": "See a feature you like. Understand how it works, down to the binary level.",
+            "readme_features": [
+              "Desktop installations",
+              "Recorded Linux crashes",
+              "JavaScript / Electron",
+              "Saved network captures"
+            ],
+            "latest_release": {
+              "tag": "rea-agents-6.8.0",
+              "date": "2026-10-25",
+              "url": "https://github.com/morluto/rea/releases/tag/rea-agents-6.8.0"
+            },
+            "archived": false
+          }
+        },
+        {
+          "rank": 2,
+          "full_name": "Nutlope/hallmark",
+          "url": "https://github.com/Nutlope/hallmark",
+          "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+          "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
+          "language": "CSS",
+          "category": "AI・エージェント",
+          "stars_period": 21862,
+          "stars_total": 51990,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:32+00:00",
+            "summary": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+            "use_case_ja": null,
+            "topics": [],
+            "license": "MIT",
+            "forks": 2769,
+            "stars_total": 51990,
+            "pushed_on": "2026-11-05",
+            "created_on": "2026-04-27",
+            "homepage": "https://www.usehallmark.com/",
+            "readme_excerpt": "A design skill for Claude Code, Codex, Cursor and OpenCode that refuses to look AI-generated.",
+            "readme_features": [],
+            "latest_release": null,
+            "archived": false
+          }
+        },
+        {
+          "rank": 3,
+          "full_name": "cloudflare/security-audit-skill",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "JavaScript",
+          "category": "AI・エージェント",
+          "stars_period": 40994,
+          "stars_total": 68376,
+          "details": {
+            "source": "GitHub REST API",
+            "checked_at": "2026-11-10T07:17:32+00:00",
+            "summary": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+            "use_case_ja": null,
+            "topics": [],
+            "license": "MIT",
+            "forks": 4495,
+            "stars_total": 68376,
+            "pushed_on": "2026-09-14",
+            "created_on": "2026-06-18",
+            "homepage": null,
+            "readme_excerpt": "A coding-agent skill that turns your agent into a security auditor. It orchestrates isolated agents through reconnaissance, coverage-led hunting, candidate validation, structured output, independent record verification, and target-neutral reporting.",
+            "readme_features": [],
+            "latest_release": null,
+            "archived": false
+          }
+        },
+        {
+          "rank": 4,
+          "full_name": "pingdotgg/t3code",
+          "url": "https://github.com/pingdotgg/t3code",
+          "description": "",
+          "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
+          "language": "TypeScript",
+          "category": "その他",
+          "stars_period": 26993,
+          "stars_total": 54567
+        },
+        {
+          "rank": 5,
+          "full_name": "heygen-com/hyperframes",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "description": "Write HTML. Render video. Built for agents.",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "TypeScript",
+          "category": "AI・エージェント",
+          "stars_period": 22344,
+          "stars_total": 81864
+        },
+        {
+          "rank": 6,
+          "full_name": "thedotmack/claude-mem",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "TypeScript",
+          "category": "AI・エージェント",
+          "stars_period": 17008,
+          "stars_total": 115526
+        },
+        {
+          "rank": 7,
+          "full_name": "debpalash/VoiceStudio",
+          "url": "https://github.com/debpalash/VoiceStudio",
+          "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "intro_ja": "動画やアニメーションの作成・処理に関連します。",
+          "language": "Python",
+          "category": "デザイン・制作",
+          "stars_period": 50585,
+          "stars_total": 106501
+        },
+        {
+          "rank": 8,
+          "full_name": "HKUDS/DeepTutor",
+          "url": "https://github.com/HKUDS/DeepTutor",
+          "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
+          "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
+          "language": "Python",
+          "category": "その他",
+          "stars_period": 16710,
+          "stars_total": 57746
+        },
+        {
+          "rank": 9,
+          "full_name": "pbakaus/impeccable",
+          "url": "https://github.com/pbakaus/impeccable",
+          "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+          "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
+          "language": "Rust",
+          "category": "AI・エージェント",
+          "stars_period": 28285,
+          "stars_total": 107082
+        },
+        {
+          "rank": 10,
+          "full_name": "storytold/artcraft",
+          "url": "https://github.com/storytold/artcraft",
+          "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+          "intro_ja": "画像・映像・デザインなどの制作に関係するプロジェクトです。",
+          "language": "Rust",
+          "category": "デザイン・制作",
+          "stars_period": 30753,
+          "stars_total": 40349
+        },
+        {
+          "rank": 11,
+          "full_name": "NationalSecurityAgency/ghidra",
+          "url": "https://github.com/NationalSecurityAgency/ghidra",
+          "description": "Ghidra is a software reverse engineering (SRE) framework",
+          "intro_ja": "ソフトウェアの内部構造を解析するためのツールです。",
+          "language": "Java",
+          "category": "セキュリティ",
+          "stars_period": 17387,
+          "stars_total": 99166
+        },
+        {
+          "rank": 12,
+          "full_name": "boykopovar/AnyPS5",
+          "url": "https://github.com/boykopovar/AnyPS5",
+          "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+          "intro_ja": "ゲームやエンターテインメントに関係するプロジェクトです。",
+          "language": "C++",
+          "category": "ゲーム・エンタメ",
+          "stars_period": 34260,
+          "stars_total": 52742
+        },
+        {
+          "rank": 13,
+          "full_name": "anthropics/claude-plugins-official",
+          "url": "https://github.com/anthropics/claude-plugins-official",
+          "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+          "intro_ja": "既存のサービスや開発環境に機能を追加する仕組みです。",
+          "language": "Python",
+          "category": "AI・エージェント",
+          "stars_period": 9215,
+          "stars_total": 46680
+        }
+      ]
+    }
+  }
+}
