@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "date_jst": "2026-11-24",
-  "captured_at": "2026-11-24T09:53:24+00:00",
+  "date_jst": "2026-11-25",
+  "captured_at": "2026-11-25T08:32:53+00:00",
   "timezone": "Asia/Tokyo",
   "source": "GitHub Trending public HTML (unofficial scraper)",
   "periods": {
@@ -16,11 +16,11 @@
           "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 2029,
-          "stars_total": 20442,
+          "stars_period": 1826,
+          "stars_total": 21988,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:28+00:00",
+            "checked_at": "2026-11-25T08:32:58+00:00",
             "summary": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
             "use_case_ja": null,
             "topics": [
@@ -32,9 +32,9 @@
               "bugcrowd"
             ],
             "license": "MIT",
-            "forks": 2163,
-            "stars_total": 20442,
-            "pushed_on": "2026-11-24",
+            "forks": 2273,
+            "stars_total": 21988,
+            "pushed_on": "2026-11-25",
             "created_on": "2026-05-05",
             "homepage": "https://elementalsouls.github.io/Claude-BugHunter",
             "readme_excerpt": "claude-bughunter is a drop-in skill bundle for the Claude Code skills system. Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in",
@@ -55,11 +55,11 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Shell",
           "category": "AI・エージェント",
-          "stars_period": 840,
-          "stars_total": 325468,
+          "stars_period": 1003,
+          "stars_total": 326095,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:29+00:00",
+            "checked_at": "2026-11-25T08:32:58+00:00",
             "summary": "An agentic skills framework & software development methodology that works.",
             "use_case_ja": null,
             "topics": [
@@ -71,9 +71,9 @@
               "skills"
             ],
             "license": "MIT",
-            "forks": 28860,
-            "stars_total": 325468,
-            "pushed_on": "2026-11-03",
+            "forks": 28938,
+            "stars_total": 326095,
+            "pushed_on": "2026-11-24",
             "created_on": "2025-10-09",
             "homepage": null,
             "readme_excerpt": "Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them.",
@@ -94,17 +94,17 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 790,
-          "stars_total": 64138,
+          "stars_period": 1074,
+          "stars_total": 65164,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:29+00:00",
+            "checked_at": "2026-11-25T08:32:59+00:00",
             "summary": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
             "use_case_ja": null,
             "topics": [],
             "license": "Apache-2.0",
-            "forks": 5832,
-            "stars_total": 64138,
+            "forks": 5927,
+            "stars_total": 65164,
             "pushed_on": "2026-11-20",
             "created_on": "2026-03-08",
             "homepage": "https://clianything.cc/",
@@ -126,8 +126,8 @@
           "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 828,
-          "stars_total": 69843
+          "stars_period": 727,
+          "stars_total": 70577
         },
         {
           "rank": 5,
@@ -137,8 +137,8 @@
           "intro_ja": "既存のサービスや開発環境に機能を追加する仕組みです。",
           "language": "TypeScript",
           "category": "開発ツール",
-          "stars_period": 397,
-          "stars_total": 18957
+          "stars_period": 360,
+          "stars_total": 19354
         },
         {
           "rank": 6,
@@ -148,8 +148,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 924,
-          "stars_total": 208316
+          "stars_period": 991,
+          "stars_total": 209288
         },
         {
           "rank": 7,
@@ -159,8 +159,8 @@
           "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
           "language": "C",
           "category": "その他",
-          "stars_period": 174,
-          "stars_total": 33111
+          "stars_period": 158,
+          "stars_total": 33281
         },
         {
           "rank": 8,
@@ -170,8 +170,8 @@
           "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
           "language": "C++",
           "category": "AI・エージェント",
-          "stars_period": 184,
-          "stars_total": 12358
+          "stars_period": 185,
+          "stars_total": 12537
         },
         {
           "rank": 9,
@@ -181,8 +181,8 @@
           "intro_ja": "画像や図表の作成・処理に関連します。",
           "language": "HTML",
           "category": "AI・エージェント",
-          "stars_period": 620,
-          "stars_total": 71340
+          "stars_period": 802,
+          "stars_total": 72412
         },
         {
           "rank": 10,
@@ -192,8 +192,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 797,
-          "stars_total": 73735
+          "stars_period": 703,
+          "stars_total": 74582
         },
         {
           "rank": 11,
@@ -203,8 +203,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 422,
-          "stars_total": 12468
+          "stars_period": 403,
+          "stars_total": 12785
         },
         {
           "rank": 12,
@@ -214,8 +214,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Shell",
           "category": "AI・エージェント",
-          "stars_period": 761,
-          "stars_total": 5315
+          "stars_period": 928,
+          "stars_total": 6092
         },
         {
           "rank": 13,
@@ -225,8 +225,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 436,
-          "stars_total": 14971
+          "stars_period": 398,
+          "stars_total": 15307
         },
         {
           "rank": 14,
@@ -236,8 +236,8 @@
           "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
           "language": "TypeScript",
           "category": "その他",
-          "stars_period": 595,
-          "stars_total": 77622
+          "stars_period": 584,
+          "stars_total": 78155
         },
         {
           "rank": 15,
@@ -247,8 +247,8 @@
           "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
           "language": "Python",
           "category": "その他",
-          "stars_period": 1087,
-          "stars_total": 16835
+          "stars_period": 1092,
+          "stars_total": 17718
         },
         {
           "rank": 16,
@@ -258,8 +258,8 @@
           "intro_ja": "動画やアニメーションの作成・処理に関連します。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 907,
-          "stars_total": 14922
+          "stars_period": 980,
+          "stars_total": 15745
         }
       ]
     },
@@ -274,11 +274,11 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 2395,
-          "stars_total": 14780,
+          "stars_period": 1956,
+          "stars_total": 14967,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:30+00:00",
+            "checked_at": "2026-11-25T08:33:00+00:00",
             "summary": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
             "use_case_ja": null,
             "topics": [
@@ -290,17 +290,17 @@
               "opencode"
             ],
             "license": "Apache-2.0",
-            "forks": 1430,
-            "stars_total": 14780,
-            "pushed_on": "2026-11-24",
+            "forks": 1438,
+            "stars_total": 14967,
+            "pushed_on": "2026-11-25",
             "created_on": "2025-12-28",
             "homepage": "https://plannotator.ai",
             "readme_excerpt": "Everything you need to annotate and stay in the loop with your agents Inbox Surface • Artifacts • Code Review Annotate plans, specs, markdown, HTML, and other interactive artifacts. Review diffs and PRs. Send feedback to your agent.",
             "readme_features": [],
             "latest_release": {
-              "tag": "v0.29.3",
-              "date": "2026-11-23",
-              "url": "https://github.com/backnotprop/plannotator/releases/tag/v0.29.3"
+              "tag": "v0.29.4",
+              "date": "2026-11-25",
+              "url": "https://github.com/backnotprop/plannotator/releases/tag/v0.29.4"
             },
             "archived": false
           }
@@ -313,18 +313,18 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 2572,
-          "stars_total": 12468,
+          "stars_period": 2626,
+          "stars_total": 12785,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:31+00:00",
+            "checked_at": "2026-11-25T08:33:00+00:00",
             "summary": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
             "use_case_ja": "AIエージェントにコーディング作業を依頼したり、開発手順を自動化するためのツールです。",
             "topics": [],
             "license": "Apache-2.0",
-            "forks": 1519,
-            "stars_total": 12468,
-            "pushed_on": "2026-11-23",
+            "forks": 1530,
+            "stars_total": 12785,
+            "pushed_on": "2026-11-24",
             "created_on": "2026-01-16",
             "homepage": "https://stitch.withgoogle.com/docs/mcp/setup",
             "readme_excerpt": "A collection of agent skills and plugins for Google Stitch, following the Agent Skills open standard. Compatible with coding agents such as Codex, Antigravity, Gemini CLI, Claude Code, Cursor, and OpenCode (manual install).",
@@ -345,17 +345,17 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 2694,
-          "stars_total": 10667,
+          "stars_period": 2494,
+          "stars_total": 10910,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:31+00:00",
+            "checked_at": "2026-11-25T08:33:01+00:00",
             "summary": "Keep your coding agent up to date with the latest web best practices",
             "use_case_ja": "AIエージェントにコーディング作業を依頼したり、開発手順を自動化するためのツールです。",
             "topics": [],
             "license": "Apache-2.0",
-            "forks": 815,
-            "stars_total": 10667,
+            "forks": 826,
+            "stars_total": 10910,
             "pushed_on": "2026-11-24",
             "created_on": "2026-01-27",
             "homepage": "https://goo.gle/modern-web-guidance",
@@ -373,8 +373,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Go",
           "category": "AI・エージェント",
-          "stars_period": 3015,
-          "stars_total": 55898
+          "stars_period": 2638,
+          "stars_total": 56166
         },
         {
           "rank": 5,
@@ -384,8 +384,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 5448,
-          "stars_total": 73735
+          "stars_period": 5369,
+          "stars_total": 74582
         },
         {
           "rank": 6,
@@ -395,8 +395,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 1581,
-          "stars_total": 59117
+          "stars_period": 1258,
+          "stars_total": 59271
         },
         {
           "rank": 7,
@@ -406,8 +406,8 @@
           "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 1903,
-          "stars_total": 8188
+          "stars_period": 1504,
+          "stars_total": 8363
         },
         {
           "rank": 8,
@@ -417,8 +417,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 2966,
-          "stars_total": 21465
+          "stars_period": 1753,
+          "stars_total": 21641
         },
         {
           "rank": 9,
@@ -428,8 +428,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 3165,
-          "stars_total": 32713
+          "stars_period": 2890,
+          "stars_total": 32958
         },
         {
           "rank": 10,
@@ -439,8 +439,8 @@
           "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
           "language": "Objective-C",
           "category": "その他",
-          "stars_period": 390,
-          "stars_total": 2472
+          "stars_period": 328,
+          "stars_total": 2501
         },
         {
           "rank": 11,
@@ -450,8 +450,8 @@
           "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
           "language": "Ruby",
           "category": "その他",
-          "stars_period": 1612,
-          "stars_total": 17671
+          "stars_period": 1567,
+          "stars_total": 17829
         },
         {
           "rank": 12,
@@ -461,8 +461,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 4324,
-          "stars_total": 31598
+          "stars_period": 3278,
+          "stars_total": 31770
         },
         {
           "rank": 13,
@@ -472,8 +472,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 3891,
-          "stars_total": 10440
+          "stars_period": 2993,
+          "stars_total": 10844
         }
       ]
     },
@@ -488,17 +488,17 @@
           "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
           "language": "CSS",
           "category": "AI・エージェント",
-          "stars_period": 29144,
-          "stars_total": 60288,
+          "stars_period": 29170,
+          "stars_total": 60753,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:32+00:00",
+            "checked_at": "2026-11-25T08:33:02+00:00",
             "summary": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
             "use_case_ja": null,
             "topics": [],
             "license": "MIT",
-            "forks": 3296,
-            "stars_total": 60288,
+            "forks": 3323,
+            "stars_total": 60753,
             "pushed_on": "2026-11-11",
             "created_on": "2026-04-27",
             "homepage": "https://www.usehallmark.com/",
@@ -516,17 +516,17 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "JavaScript",
           "category": "AI・エージェント",
-          "stars_period": 36869,
-          "stars_total": 77693,
+          "stars_period": 35068,
+          "stars_total": 78107,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:33+00:00",
+            "checked_at": "2026-11-25T08:33:03+00:00",
             "summary": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
             "use_case_ja": null,
             "topics": [],
             "license": "MIT",
-            "forks": 5239,
-            "stars_total": 77693,
+            "forks": 5275,
+            "stars_total": 78107,
             "pushed_on": "2026-09-14",
             "created_on": "2026-06-18",
             "homepage": null,
@@ -544,11 +544,11 @@
           "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
           "language": "TypeScript",
           "category": "その他",
-          "stars_period": 21809,
-          "stars_total": 27335,
+          "stars_period": 22073,
+          "stars_total": 27658,
           "details": {
             "source": "GitHub REST API",
-            "checked_at": "2026-11-24T09:53:33+00:00",
+            "checked_at": "2026-11-25T08:33:03+00:00",
             "summary": "Open-source Grok Bot alternative with a virtual machine that bots can use",
             "use_case_ja": null,
             "topics": [
@@ -560,9 +560,9 @@
               "electron"
             ],
             "license": "Apache-2.0",
-            "forks": 3896,
-            "stars_total": 27335,
-            "pushed_on": "2026-11-24",
+            "forks": 3950,
+            "stars_total": 27658,
+            "pushed_on": "2026-11-25",
             "created_on": "2026-08-11",
             "homepage": "https://www.mausbot.com/",
             "readme_excerpt": "The open-source Grok Bot alternative: your own team of AI bots, in a chat app.",
@@ -573,9 +573,9 @@
               "🔌 Connected apps"
             ],
             "latest_release": {
-              "tag": "v0.1.178",
-              "date": "2026-11-23",
-              "url": "https://github.com/milind-soni/OpenMausBot/releases/tag/v0.1.178"
+              "tag": "v0.1.180",
+              "date": "2026-11-24",
+              "url": "https://github.com/milind-soni/OpenMausBot/releases/tag/v0.1.180"
             },
             "archived": false
           }
@@ -588,8 +588,8 @@
           "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 44453,
-          "stars_total": 76150
+          "stars_period": 47147,
+          "stars_total": 78358
         },
         {
           "rank": 5,
@@ -599,8 +599,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 16727,
-          "stars_total": 199650
+          "stars_period": 16946,
+          "stars_total": 200161
         },
         {
           "rank": 6,
@@ -610,8 +610,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 17492,
-          "stars_total": 119415
+          "stars_period": 17462,
+          "stars_total": 119629
         },
         {
           "rank": 7,
@@ -621,8 +621,8 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 6023,
-          "stars_total": 8763
+          "stars_period": 6218,
+          "stars_total": 9091
         },
         {
           "rank": 8,
@@ -632,118 +632,129 @@
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 5093,
-          "stars_total": 14780
+          "stars_period": 5292,
+          "stars_total": 14967
         },
         {
           "rank": 9,
+          "full_name": "Ebony-Vinyl/dsh-our-free-model",
+          "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+          "description": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+          "intro_ja": "既存のサービスや開発環境に機能を追加する仕組みです。",
+          "language": "JavaScript",
+          "category": "開発ツール",
+          "stars_period": 48193,
+          "stars_total": 86555
+        },
+        {
+          "rank": 10,
           "full_name": "HKUDS/DeepTutor",
           "url": "https://github.com/HKUDS/DeepTutor",
           "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
           "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
           "language": "Python",
           "category": "その他",
-          "stars_period": 19919,
-          "stars_total": 62114
+          "stars_period": 20099,
+          "stars_total": 62510
         },
         {
-          "rank": 10,
+          "rank": 11,
           "full_name": "yetone/magpie",
           "url": "https://github.com/yetone/magpie",
           "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Go",
           "category": "AI・エージェント",
-          "stars_period": 20747,
-          "stars_total": 40814
+          "stars_period": 20773,
+          "stars_total": 41239
         },
         {
-          "rank": 11,
+          "rank": 12,
           "full_name": "pbakaus/impeccable",
           "url": "https://github.com/pbakaus/impeccable",
           "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Rust",
           "category": "AI・エージェント",
-          "stars_period": 30675,
-          "stars_total": 115892
+          "stars_period": 30688,
+          "stars_total": 116488
         },
         {
-          "rank": 12,
+          "rank": 13,
           "full_name": "sherlock-project/sherlock",
           "url": "https://github.com/sherlock-project/sherlock",
           "description": "Hunt down social media accounts by username across social networks",
           "intro_ja": "公開されているソフトウェア開発プロジェクトです。",
           "language": "Python",
           "category": "その他",
-          "stars_period": 21780,
-          "stars_total": 116611
+          "stars_period": 22382,
+          "stars_total": 117248
         },
         {
-          "rank": 13,
+          "rank": 14,
           "full_name": "AgriciDaniel/claude-seo",
           "url": "https://github.com/AgriciDaniel/claude-seo",
           "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 12148,
-          "stars_total": 32040
+          "stars_period": 12213,
+          "stars_total": 32257
         },
         {
-          "rank": 14,
+          "rank": 15,
           "full_name": "google-labs-code/stitch-skills",
           "url": "https://github.com/google-labs-code/stitch-skills",
           "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 3630,
-          "stars_total": 12468
+          "stars_period": 4010,
+          "stars_total": 12785
         },
         {
-          "rank": 15,
+          "rank": 16,
           "full_name": "heygen-com/hyperframes",
           "url": "https://github.com/heygen-com/hyperframes",
           "description": "Open-source AI video editor: edit your own footage, or create and remake any video with Claude Code, Codex or the free Studio app. Write HTML, render MP4. By HeyGen.",
           "intro_ja": "動画やアニメーションの作成・処理に関連します。",
           "language": "TypeScript",
           "category": "AI・エージェント",
-          "stars_period": 18679,
-          "stars_total": 89208
+          "stars_period": 18583,
+          "stars_total": 89772
         },
         {
-          "rank": 16,
+          "rank": 17,
           "full_name": "elementalsouls/Claude-BugHunter",
           "url": "https://github.com/elementalsouls/Claude-BugHunter",
           "description": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
           "intro_ja": "AIの活用や自動化に関係するプロジェクトです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 13817,
-          "stars_total": 20442
+          "stars_period": 15607,
+          "stars_total": 21988
         },
         {
-          "rank": 17,
+          "rank": 18,
           "full_name": "kajisho5/ffmpeg-skill",
           "url": "https://github.com/kajisho5/ffmpeg-skill",
           "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Python",
           "category": "AI・エージェント",
-          "stars_period": 8031,
-          "stars_total": 10441
+          "stars_period": 8190,
+          "stars_total": 10844
         },
         {
-          "rank": 18,
+          "rank": 19,
           "full_name": "vercel-labs/agent-browser",
           "url": "https://github.com/vercel-labs/agent-browser",
           "description": "Browser automation CLI for AI agents",
           "intro_ja": "AIに作業を任せる「エージェント」に関係するツールです。",
           "language": "Rust",
           "category": "AI・エージェント",
-          "stars_period": 9273,
-          "stars_total": 53695
+          "stars_period": 9395,
+          "stars_total": 53870
         }
       ]
     }
